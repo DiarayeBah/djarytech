@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Documentation HTML5</title>
+	<!-- Liaison fichier css -->
+	<link rel="stylesheet" type="text/css" href="css/styleHtml.css">
+</head>
+<body>
+	<div class="content">
+		<!-- Debut menu lateral -->
+		<div id="sidebar">
+			<h2>Documentation HTML5</h2>
+			<ul>
+				<li><a href="#Introduction">Introduction</a></li>
+				<li><a href="#FONDATIONS du HTML5">Les Fondations du HTML5</a></li>
+				<li><a href="#Balises HTML5">Les Balises HTML5</a></li>
+				<li><a href="#Squelette">Le Squelette HTML5</a></li>
+				<li><a href="#Paragraphes">Les Paragraphes</a></li>
+				<li><a href="#Listes">Les Listes</a></li>
+				<li><a href="#Liens">Les Liens</a></li>
+				<li><a href="#Balises en blocs">Les Balises en blocs</a></li>
+				<li><a href="#Balises en ligne">Les Balises en ligne</a></li>
+				<li><a href="#Tableaux">Les Tableaux</a></li>
+				<li><a href="#Formulaires">Les Formulaires</a></li>
+				<li><a href="#HTML Avancé">HTML Avancé</a></li>
+				<li><a href="#Medias Query">Les Medias Query</a></li>
+				<li><a href="#API HTML">Les API HTML</a></li>
+			    <li><a href="#Convertisseur Px en Em">Convertisseur Px en Em</a></li>
+			    <li><a href="#Balise Canvas">La Balise Canvas</a></li>
+			    <li><a href="#Referances">Referances</a></li>
+			    <li><a href="#Defis du code">Les Defis du code</a></li>
+			    <li><a href="#Projets HTML5">Les Projets HTML5</a></li>
+			</ul>
+			
+		</div>
+		<!-- Fin menu lateral -->
+
+		<!-- Debut contenu de la doc -->
+		<div class="doc">
+			<div id="Introduction">
+				<h2 id="ancre">Introduction</h2>
+				<div class="contenu">
+				Le but de ce premier chapitre est de vous convaincre rapidement de l’importance et de la place particulière du HTML et du CSS parmi l’ensemble des langages informatiques.</p>
+				<p>Nous allons également nous intéresser à la question « pourquoi apprendre à coder » et passer en revue les alternatives existantes à l’apprentissage de la programmation en soulignant les points forts et faibles de chacune d’entre elles.</p>
+				<p>&nbsp;</p>
+				<h2>HTML et CSS : deux langages incontournables</h2>
+				<p>Il existe aujourd’hui des dizaines et des dizaines de langages informatiques et de programmation différents : HTML, CSS, JavaScript, PHP, Python, Ruby on Rails, C, C#, C++, Java, etc. pour ne citer qu’eux.</p>
+				<p>Certains de ces langages ont des possibilités et des rôles similaires, ce qui signifie qu’ils vont être (dans une certaine mesure) interchangeables : on va pouvoir utiliser un langage ou l’autre pour effectuer une même opération selon notre sensibilité personnelle ou selon l’environnement dans lequel on se trouve.</p>
+				<p>D’autres langages, en revanche, vont être beaucoup plus exclusifs ou ne pas avoir de concurrent et on va donc obligatoirement devoir passer par eux pour effectuer certaines opérations. Cela va être le cas du HTML et du CSS.</p>
+				<p>En effet, le HTML et le CSS sont deux véritables standards en informatique qui n’ont à l’heure actuelle aucun concurrent comme cela va pouvoir être le cas pour le langage PHP par exemple (pour lequel il existe des alternatives comme Ruby on Rails ou Python entre autres).</p>
+				<p>De plus, les langages HTML et CSS vont se trouver à la base de tout projet web car ils ont un rôle qui les rend incontournables : les navigateurs (Google Chrome, Safari, etc.) sont des programmes qui ont été construits pour pouvoir lire du code HTML au départ et qui ne peuvent aujourd&rsquo;hui lire que du code HTML, CSS et JavaScript et nous allons donc nous appuyer sur ces langages (et sur le HTML en particulier) pour pouvoir afficher nos pages.</p>
+				<p>En bref : quel que soit votre projet web (blog, site e-commerce, application mobile, etc.), vous devrez forcément utiliser du HTML et du CSS.</p>
+				<p>Pour être un peu plus précis et pour anticiper un peu sur la suite de ce cours, le HTML est un langage de structure : il permet d&rsquo;indiquer au navigateur que tel contenu est un titre, que tel autre est un simple texte, que cet objet est une image, que celui-ci est une liste, etc. Le navigateur, qui « comprend » le HTML, va se baser sur ces indications pour afficher les contenus. </p>
+				<p>Voici un premier exemple de code HTML :</p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20240'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-html.png" alt="Exemple de code HTML" width="700" height="240" class="alignnone size-full wp-image-6994 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-html-300x103.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-html-400x137.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+				<p>Je n&rsquo;ai pas l&rsquo;intention de vous expliquer précisément ce que représente chaque élément dans ce code pour le moment car ceci n&rsquo;aurait aucun intérêt. Pas d&rsquo;inquiétude, nous aurons le temps de voir tout cela par la suite. </p>
+				<p>L&rsquo;idée ici est simplement de commencer à vous familiariser avec la syntaxe du HTML et de voir comment le navigateur va traiter ce code. On va ici se concentrer sur deux lignes : la ligne contenant l&rsquo;élément HTML <code>h1</code> qui représente un titre de niveau 1 et celle contenant l&rsquo;élément <code>p</code> qui représente un paragraphe. </p>
+				<p>Observons comment le navigateur va traiter ces contenus en ouvrant notre fichier dans Google Chrome par exemple : </p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20200'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html.png" alt="Résultat visuel de notre premier code HTML" width="700" height="200" class="alignnone size-full wp-image-6998 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html-400x114.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+				<p>Comme vous pouvez le voir, seul le contenu textuel placé entre <code>&lt;h1&gt;</code> et <code>&lt;/h1&gt;</code> et entre <code>&lt;p&gt;</code> et <code>&lt;/p&gt;</code> est affiché à l&rsquo;utilisateur. On voit bien que le navigateur comprend que ces deux contenus ne sont pas équivalents puisqu&rsquo;il les traite de manière différente en les affichant différemment. </p>
+				<p>Ajoutons maintenant un peu de CSS à la page. Le CSS est un langage de styles : il permet de modifier l&rsquo;apparence ou le rendu visuel de nos contenus HTML et donc de nos pages web.</p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20185'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-css.png" alt="Exemple de code CSS" width="700" height="185" class="alignnone size-full wp-image-6996 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-css.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-css-300x79.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/exemple-code-css-400x106.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+				<p>Ce code CSS indique au navigateur que les titres de niveau 1 devront avoir une taille de 16px (pixels) et être de couleur orange. On indique également que nos paragraphes doivent avoir une taille de 16px et une couleur bleue. Voici le résultat :</p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20160'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html-css.png" alt="Résultat visuel de notre premier code CSS" width="700" height="160" class="alignnone size-full wp-image-6999 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html-css.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html-css-300x69.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-exemple-code-html-css-400x91.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+				<p>Une nouvelle fois, n’essayez pas de comprendre ces codes immédiatement : nous allons le faire dans les prochains chapitres. Le but ici n’est que de vous montrer à quoi le « code » en général va pouvoir ressembler.</p>
+				<p>&nbsp;</p>
+				<h2>Quelles alternatives à l’apprentissage des langages informatiques ?</h2>
+				<p>De nombreuses personnes veulent lancer leur site internet sans forcément apprendre à coder. Est-ce une bonne idée ? Quels sont les risques ? Quelles alternatives existent pour créer un site web sans avoir à le coder ? Quels sont leurs points forts et points faibles ?</p>
+				<p>Il existe selon moi trois alternatives à l&rsquo;apprentissage de la programmation qu&rsquo;on va pouvoir considérer lorsqu&rsquo;on a un projet web mais qu&rsquo;on ne veut pas forcément devenir développeur : </p>
+				<ul>
+				<li>Le recours à un développeur / une agence externe ;</li>
+				<li>L&rsquo;utilisation d&rsquo;un CMS ;</li>
+				<li>L&rsquo;utilisation d&rsquo;un éditeur WYSIWIG.</li>
+				</ul>
+				<p>Je vais tenter d&rsquo;expliquer les points forts et faibles de chacune de ces alternatives et vous montrer en quoi la connaissance ou à minima la compréhension du fonctionnement des langages informatiques reste quasi indispensable quelle que soit l&rsquo;option choisie. </p>
+				<h3>Solution n°1 : faire appel à un développeur externe</h3>
+				<p>La première solution, qui est certainement la plus évidente pour créer un site internet lorsqu’on ne veut pas le coder soi-même, est de faire appel à un développeur externe ou même à une agence de développement.</p>
+				<p>Cette première alternative présente à la fois des avantages et des inconvénients. Tout d’abord, parlons du prix. Ici, il va être très variable selon le site que vous allez vouloir créer bien sûr mais également selon le prestataire choisi.</p>
+				<p>En effet, si vous faites appel à une agence, le coût sera très souvent beaucoup plus élevé que si vous faites appel à un freelance (d’autant plus si vous passez par une plateforme d’annonces où ils sont en concurrence).</p>
+				<p>Sans rentrer dans le débat sur la qualité, il me semble quand même honnête de dire qu’aujourd’hui une personne seule ne peut pas tout (bien) faire : design, intégration, etc.</p>
+				<p>En plus de cela, deux autres questions d’importance se posent lorsque vous faites appel à un prestataire externe. La première est : comment bien expliquer ce que vous voulez créer comme site si vous ne savez pas comment le code fonctionne ?</p>
+				<p>Un client qui n’a aucune notion technique ne va pas pouvoir définir clairement ce qu’il veut. En effet, comprenez bien que le développement est une langue différente tout comme peut l’être la mécanique. Lorsque vous n’exprimez pas précisément votre besoin avec ses spécificités techniques, vous laissez le soin au développeur de les imaginer, ce qui entraine souvent des incompréhensions entre le client et le prestataire développeur.</p>
+				<p>Imaginez que vous faisiez appel à des ouvriers pour construire une maison mais sans passer par un architecte : vous n’allez pas pouvoir décrire précisément ce que vous voulez. Vous allez décrire votre besoin avec vos mots comme par exemple : « je veux une terrasse, 4 chambres, une cheminée », etc.</p>
+				<p>De votre point de vue vous « avez tout dit ». Cependant, du point de vue des ouvriers, l’essentiel est manquant : quelles matières utiliser ? quel type d’évacuation des eaux installer ? où faire passer les câbles électriques ? quel type de toiture choisir ?</p>
+				<p>Cela va donc naturellement mener à un client mécontent et qui va demander des modifications. Souvent, il va demander ce qui lui semble être de « petites modifications » mais les modifications demandées ne vont pouvoir être effectuées qu’en changeant en profondeur le site.</p>
+				<p>Si vous passez par une grosse agence, il est ici possible qu’il y ait une personne dont le rôle est de transcrire vos besoins en termes techniques. Cependant, ce genre d’agences est bien souvent hors budget pour le commun des mortels.</p>
+				<p>Enfin, reste la question de la maintenabilité du site : une fois le site livré, comment le faire évoluer ? Comment faire si des bugs apparaissent avec le temps et l’évolution des langages informatiques ? Ici, ne comptez pas trop sur votre prestataire de base pour vous servir d’aide en continu (à moins que vous ne le payiez à nouveau à chaque fois !).</p>
+				<p>Attention : je n’essaie pas de vous convaincre de ne pas passer par une agence ici. Ce que je veux vous montrer est que passer par un prestataire ne dispense pas de connaitre certaines bases en informatique : si vous connaissez ces bases et si vous comprenez comment fonctionne un site web vous pourrez vous exprimer beaucoup plus clairement et exprimer votre besoin dans un langage qui sera compréhensible pas les développeurs. Vous aurez ainsi beaucoup plus de chances d&rsquo;avoir un site conforme à vos attentes et vous économiserez sur la facture finale (car moins d’allers-retours et d’incertitude).</p>
+				<h3>Solution n°2 : Utiliser un CMS</h3>
+				<p>Un CMS (pour « Content Management System » ou « Système de Gestion de Contenu ») désigne un ensemble d’applications / de logiciels qui vont permettre de mettre en place et de gérer un site internet.</p>
+				<p>Un CMS permet donc de posséder un site internet sans se soucier de comment fonctionne le code. Vous pouvez ici imaginer les différentes commandes d’une voiture : lorsque vous achetez une voiture, vous n’avez pas besoin de savoir comment la voiture fonctionne en soi ou de qui se cache sous le capot ; vous n’avez qu’à utiliser les commandes à votre disposition : pédales, levier de vitesse, volant, etc.</p>
+				<p>Parmi les CMS les plus connus en France on peut notamment nommer WordPress qui permet aujourd’hui de créer plus ou moins n’importe quel type de site ou PrestaShop pour créer un site e-commerce.</p>
+				<p>Les CMS sont généralement conçus sur le même modèle d’architecture modulable : les utilisateurs vont installer le CMS de base et vont ensuite pouvoir ajouter différents modules ou plugins pour personnaliser leur site.</p>
+				<p>Utiliser un CMS semble donc parfait pour quelqu’un qui ne sait pas coder à priori. La réalité est toutefois différente. Ici, vous devez bien comprendre que les CMS sont souvent très complexes et que leurs plus grands avantages (la simplicité d’installation et la modularité) vont être également souvent leurs plus grandes faiblesses.</p>
+				<p>En effet, comme les CMS sont créés de façon à pouvoir être utilisés par tous, la plupart d’entre eux sont d’une complexité rare (du point de vue du code) et vont souvent posséder des tonnes de fonctionnalités qui ne vont pas vous être utiles afin de couvrir le plus de besoins possibles et ainsi satisfaire le plus d’utilisateurs.</p>
+				<p>De plus, une autre contrepartie de cette architecture commune et modulable est qu’il va être très compliqué d’effectuer des modifications sur la structure de votre site à posteriori sans tout casser à moins d’avoir de sérieuses connaissances techniques sur le CMS en question.</p>
+				<p>Enfin, il reste le problème de l’incompatibilité possible entre différents modules que vous pourriez installer après avoir créé votre site.</p>
+				<p>L’usage des CMS reste cependant un bon compromis pour une personne lançant un site sans prétention ou pour quelqu’un qui n’a pas un besoin très spécifique mais, pour maitriser complètement son CMS et pour faire évoluer son site en toute sérénité, il faut finalement être un excellent développeur et un utilisateur expérimenté du CMS en question.</p>
+				<h3>Solution n°3 : la création avec un éditeur WYSIWIG</h3>
+				<p>Les éditeurs WYSIWIG (« What You See Is What You Get » ou en français « Ce que vous voyez est ce que vous obtenez ») sont des éditeurs qui vont créer eux même le code à partir d’un modèle que vous allez créer.</p>
+				<p>Un éditeur WYSIWIG va se présenter de la façon suivante : une palette d’outils sur le côté et une page dans laquelle vous allez pouvoir utiliser ces outils. Vous allez ainsi par exemple pouvoir insérer un rectangle dans votre page puis placer du texte dedans puis changer la taille de ce texte et etc.</p>
+				<p>L’éditeur va ensuite se charger de transformer ce que vous avez créé (« ce que vous voyez ») en code.</p>
+				<p>Le gros souci avec ces éditeurs est qu’ils ne possèdent pas la même logique qu’un humain et qu’ils ne peuvent pas penser un projet ou une page dans sa globalité. Ainsi, le code créé va très souvent être de très mauvaise qualité et cela va impacter le référencement de votre site entre autres.</p>
+				<p>Je ne parlerai pas plus de ces éditeurs qui ne constituent pas une alternative valide à mes yeux par rapport aux autres solutions proposées.</p>
+				<p>&nbsp;</p>
+				<h2>En résumé : apprendre à coder, ce n’est pas que pour les développeurs !</h2>
+				<p>Je pense vous avoir démontré l’intérêt de maitriser au moins les bases du développement dans la partie précédente si vous avez un projet lié au web : économie d’argent, plus d’efficacité, création d’un site conforme à vos attentes, etc.</p>
+				<p>En effet, apprendre à coder ou tout au moins connaitre les bases en développement c’est avant tout mettre un pied dans le monde des développeurs pour pouvoir les comprendre et pouvoir vous faire comprendre.</p>
+				<p>De plus, connaitre le rôle des différents langages et comprendre comment fonctionne votre site permet de pouvoir le gérer de manière beaucoup plus efficace. En effet, je suis et reste persuadé qu’on ne peut pas travailler sereinement lorsqu’on ne comprend pas son outil de travail ou la structure dans laquelle on travaille.</p>
+				<p>C’est évident et pourtant la plupart des gens essayent de se persuader et de persuader les autres du contraire. Pourquoi ? Car tout le monde utilise internet aujourd’hui et la majorité des gens ne veulent pas faire l’effort de comprendre comment tout cela fonctionne.</p>
+				<p>Ce n’est pas un problème lorsque vous êtes un simple utilisateur, mais ça le devient lorsque vous devez gérer un site internet ou même lorsque vous travaillez dans un domaine lié au digital.</p>
+				<p>Deviendriez-vous plombier sur un coup de tête ? Non, car vous n’y connaissez rien en plomberie. C’est exactement pareil sur le web.</p>
+				<p>L’immense majorité des échecs liés au web proviennent du fait que des personnes se lancent dans l’aventure sans la moindre connaissance de leur environnement.</p>
+				<p>N’oubliez pas qu’il est essentiel pour qu’un commerce fonctionne -et aujourd’hui plus que jamais- d’avoir une compréhension de son propre business, de son architecture et de son infrastructure.</p>
+				<p>Si vous faîtes l’effort d’acquérir ces connaissances, je vous garantis que vous avez d’ores-et-déjà battu 99% de vos concurrents.</p>
+				<p>Convaincu de l’utilité d’apprendre à coder ? Dans ce cas, passons à la suite ! Car je suis certain que vous êtes impatients de découvrir ce que signifient les initiales « HTML » et « CSS » !</p>
+				
+
+				</div>
+
+				
+			</div>
+		
+		<!-- Debut de section FONDATIONS du HTML -->
+		<div id="FONDATIONS">
+			<h3 id="FONDATIONS">LES FONDATIONS DU HTML5</h3>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		</div>
+		
+		<!-- Fin de section FONDATION du HTML -->
+
+		<!-- Debut de section balises HTML5 -->
+
+		<div id="Balises HTML5">
+				<h2 id="ancre">Balises HTML5</h2>
+				<div class="contenu">
+				Le HTML est un langage de balisage, c’est-à-dire un langage qui va servir à définir chaque contenu dans une page. Mais comment fait-on en pratique pour indiquer que tel contenu est un titre, tel autre est un lien, etc. ? C’est ce que nous allons voir dans cette leçon. </p>
+				<p>&nbsp;</p>
+				<h2>Les éléments HTML</h2>
+				<p>Le langage HTML tout entier repose sur l’utilisation d’éléments. Si vous comprenez bien ce qu’est un élément, vous comprenez le HTML.</p>
+				<p>Les éléments HTML vont nous permettre de créer la structure d’une page HTML, de définir chaque contenu de notre page et également de passer certaines informations utiles au navigateur pour afficher la page (comme le type d’encodage utilisé par exemple pour que celui-ci affiche bien nos accents français).  </p>
+				<p>Dans une page, nous allons utiliser les éléments en HTML pour marquer du contenu, c’est-à-dire pour lui donner du sens aux yeux des navigateurs et des moteurs de recherche. Selon l’élément utilisé, un navigateur va reconnaître le contenu comme étant de telle ou telle nature.</p>
+				<p>Ainsi, on va utiliser des éléments pour définir un paragraphe ou un titre par exemple, ou encore pour insérer une image ou une vidéo dans un document. </p>
+				<p>L’élément <code>p</code>, par exemple, sert à définir un paragraphe, tandis que l’élément <code>a</code> va nous permettre de créer un lien, etc.</p>
+				<p>Aujourd’hui, il existe plus de 120 éléments HTML différents aux rôles très variés et qui font la richesse de ce langage. Nous allons étudier et nous servir d’une grande partie d’entre eux dans ce cours. </p>
+				<p>&nbsp;</p>
+				<h2>Les balises HTML</h2>
+				<p>Un élément HTML peut être soit constitué d’une paire de balises (ouvrante et fermante) et d’un contenu, soit d’une balise unique qu’on dit alors « orpheline ».</p>
+				<p>L’élément <code>p</code> (qui sert à définir un paragraphe) est par exemple constitué d’une balise ouvrante, d’une balise fermante et d’un contenu textuel entre les balises. L’idée ici est que le texte contenu entre les deux balises va être le texte considéré par le navigateur comme étant un paragraphe. </p>
+				<p>Voici comment on va écrire cela : </p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20198'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-p-exemple-html.png" alt="Composition d&#039;un élément HTML p" width="694" height="198" class="alignnone size-full wp-image-7022 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-p-exemple-html.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-p-exemple-html-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-p-exemple-html-400x114.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+				<p>Comme vous pouvez le constater, la balise ouvrante de l’élément est constituée d’un chevron ouvrant <code>&lt;</code>, du nom de l’élément en question et d’un chevron fermant <code>&gt;</code>.</p>
+				<p>Notez bien ici la différence entre la balise ouvrante et la balise fermante de notre élément <code>p</code> : la balise fermante contient un slash avant le nom de l’élément. </p>
+				<p>Vous pouvez déjà retenir cette syntaxe qui sera toujours la même en HTML. </p>
+				<p>Certains éléments en HTML ne vont être constitués que d’une balise qu’on appelle alors orpheline. Cela va être le cas pour certains éléments qui ne possèdent pas de contenu textuel comme l’élément <code>br</code> par exemple qui sert simplement à créer un retour à la ligne en HTML et qui va s’écrire comme ceci : </p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20198'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-br-exemple-html.png" alt="Composition d&#039;un élément HTML br" width="694" height="198" class="alignnone size-full wp-image-7020 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-br-exemple-html.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-br-exemple-html-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-br-exemple-html-400x114.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+				<p>Notez ici qu’il est possible que vous rencontriez un jour une syntaxe un peu différente pour les balises orphelines utilisant un slash après le nom de l’élément comme ceci : <code>&lt;br/&gt;</code>. </p>
+				<p>Cette syntaxe est une syntaxe qui était acceptée il y a quelques années mais qui est aujourd’hui dépréciée en HTML. Elle provient en fait d’un autre langage qui est le XML. Il est déconseillé de l’utiliser aujourd’hui en HTML puisqu’elle risque de ne plus être reconnue par les navigateurs dans le futur. </p>
+				<p>Par ailleurs, notez que certains développeurs ont tendance, par abus de langage, à confondre les termes « élément » et « balise » en utilisant le mot « balise » pour désigner un élément. Vous verrez peut-être cela écrit dans d’autres cours. </p>
+				<p>C’est toutefois un abus de langage et je pense qu’il est préférable pour une bonne compréhension d’appeler chaque objet d&rsquo;un langage par son vrai nom. Je vous conseille donc de retenir plutôt ce que j’ai expliqué plus haut. </p>
+				<p>&nbsp;</p>
+				<h2>Les attributs HTML</h2>
+				<p>Finalement, les éléments vont également pouvoir contenir des attributs qu’on va alors placer au sein de la balise ouvrante de ceux-ci. Pour certains éléments, les attributs vont être facultatifs tandis que pour d’autres ils vont être obligatoires pour garantir le bon fonctionnement du code HTML. </p>
+				<p>Les attributs vont en effet venir compléter les éléments en les définissant plus précisément ou en apportant des informations supplémentaires sur le comportement d&rsquo;un élément.</p>
+				<p>Un attribut contient toujours une valeur, qu’on peut cependant parfois omettre dans le cas des attributs ne possédant qu’une seule valeur (car la valeur est alors considérée comme évidente).</p>
+				<p>Prenons ici l’exemple de l’élément <code>a</code> qui est l’abréviation de « anchor » ou « ancre » en français. Cet élément va principalement nous servir à créer des liens vers d’autres pages. </p>
+				<p>Pour le faire fonctionner correctement, nous allons devoir lui ajouter un attribut <code>href</code> pour « hypertexte reference » ou « référence hypertexte » en français.</p>
+				<p>En effet, c’est l’attribut <code>href</code> qui va nous permettre de préciser la cible du lien, c’est-à-dire la page de destination du lien en lui passant l’adresse de la page en question en valeur. </p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20198'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-a-attribut-href-html.png" alt="Composition d&#039;un élément HTML a avec href" width="694" height="198" class="alignnone size-full wp-image-7019 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-a-attribut-href-html.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-a-attribut-href-html-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-a-attribut-href-html-400x114.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+				<p>Un autre exemple : l’élément <code>img</code>, servant à insérer une image dans une page HTML, va lui nécessiter deux attributs qui sont les attributs <code>src</code> et <code>alt</code>. </p>
+				<p>L’attribut <code>src</code> (pour « source ») va prendre comme valeur l’adresse de l’image tandis que l’attribut <code>alt</code>  (pour « alternative ») va nous permettre de renseigner une description textuelle de l’image qui sera affichée dans les cas où l’image ne serait pas disponible pour une raison ou une autre : image introuvable, impossible à charger, etc. </p>
+				<p>L’attribut <code>alt</code> va également se révéler indispensable pour rendre notre site accessible aux non-voyants ou aux mal voyants et pour leur fournir une bonne expérience de navigation puisqu’ils sont généralement équipés de lecteur spéciaux qui vont pouvoir lire la valeur de l’attribut <code>alt</code> et donc leur permettre de se faire une représentation du contenu de l’image. </p>
+				<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20198'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-img-attribut-src-alt-html.png" alt="Composition d&#039;un élément HTML img avec attributs" width="694" height="198" class="alignnone size-full wp-image-7021 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-img-attribut-src-alt-html.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-img-attribut-src-alt-html-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/element-img-attribut-src-alt-html-400x114.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+				<p>Notez au passage que l’élément <code>img</code> n’est constitué que d’une seule balise orpheline, tout comme l’élément <code>br</code> vu précédemment. On place dans ce cas les attributs au sein de la balise orpheline.</p>
+				
+				</div>
+		</div>
+		<!-- Fin de section balises HTML5 -->
+
+
+		<!-- Debut de section de Squelette du HTML -->
+		<div class="contenu">
+			<h2 id="Squelette">Squelette (Structure) de la base d'une page en HTML5</h2>
+			<div class="contenu">
+			Le W3C, en définissant des standards de développement, a véritablement simplifié la tâche aux développeurs. </p>
+			<p>En effet aujourd’hui, tous les navigateurs sérieux suivent les standards proposés par le W3C, ce qui n’était pas forcément le cas dans le passé. </p>
+			<p>Cela nous permet donc d’être plus ou moins certain qu’un même code va produire le même résultat quel que soit le navigateur utilisé par les visiteurs qui consultent la page. </p>
+			<p>Cependant, cela n’est possible que parce que les développeurs eux-mêmes suivent certains schémas de construction de leur page qui sont anticipables et attendus par les navigateurs. </p>
+			<p>Le schéma de base d’une page HTML va donc toujours être le même. C’est ce que nous appellerons la « structure minimale d’une page HTML valide ». </p>
+			<p>Cette nouvelle leçon va être consacrée à la création d’une première page HTML dite « valide », c’est-à-dire qui respecte les standards, et va nous permettre de comprendre le rôle de chaque élément de cette structure minimale. </p>
+			<p>&nbsp;</p>
+			<h2>La structure minimale d’une page HTML</h2>
+			<p>Pour qu’une page HTML soit déclarée valide, elle doit obligatoirement comporter certains éléments et suivre un schéma précis.</p>
+			<p>Vos pages HTML devraient toujours être valides pour les raisons évoquées ci-dessus. En effet, une page non valide ne sera pas comprise par le navigateur qui va alors potentiellement mal l’afficher voire dans certains cas ne pas l’afficher du tout. </p>
+			<p>De plus, une page non valide sera également mal analysée par les moteurs de recherche et ces mêmes moteurs de recherche risquent donc de ne pas la valoriser, c’est-à-dire de ne pas la proposer aux utilisateurs recherchant une information que votre page contient. En d’autres termes, posséder des pages non valides risque d’impacter négativement le référencement de ces pages et de votre site en général dans les moteurs de recherche. </p>
+			<p>Voici ci-dessous le code minimum pour créer une page HTML valide. Nous allons dans la suite de ce chapitre expliquer le rôle de chaque élément et attribut.</p>
+			<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20200'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-minimale-page-html-valide.png" alt="Structure minimale d&#039;une page HTML valide" width="700" height="200" class="alignnone size-full wp-image-7026 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-minimale-page-html-valide.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-minimale-page-html-valide-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-minimale-page-html-valide-400x114.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+			<p>&nbsp;</p>
+			<h2>Le DOCTYPE</h2>
+			<p>Tout d’abord, nous devrons toujours démarrer une page HTML en précisant le <code>doctype</code> de notre document. Comme son nom l’indique, le <code>doctype</code> sert à indiquer le type du document.</p>
+			<p>Faites bien attention à l’écriture du <code>doctype</code> : vous pouvez remarquer que la balise représentant le <code>doctype</code> commence par un point d’exclamation. Ceci est un cas unique.</p>
+			<p>Dans la balise de l’élément <code>doctype</code>, on va préciser le langage utilisé, à savoir le HTML dans notre cas.</p>
+			<p>Il est possible que vous trouviez encore sur certains sites une déclaration du <code>doctype</code> possédant une syntaxe différente et plus complexe comme celle-ci : <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code>. </p>
+			<p>Cette écriture correspond à une ancienne syntaxe qui était utilisée jusqu’à la version 4 du HTML. </p>
+			<p>&nbsp;</p>
+			<h2>L’élément HTML</h2>
+			<p>Après avoir renseigné le type du document, nous devons utiliser un élément <code>html</code>. Cet élément est composé d’une paire de balises ouvrante <code>&lt;html&gt;</code> et fermante <code>&lt;/html&gt;</code>. </p>
+			<p>L’élément <code>html</code> va représenter notre page en soi. On va insérer tout le contenu de notre page (et donc les autres éléments) à l’intérieur de celui-ci.</p>
+			<p>&nbsp;</p>
+			<h2>Les éléments head et body</h2>
+			<p>A l’intérieur de l’élément <code>html</code>, nous devons à nouveau indiquer obligatoirement deux éléments qui sont les éléments <code>head</code> et <code>body</code> et qui vont avoir des rôles très différents. </p>
+			<p>L’élément <code>head</code> est un élément d’en-tête. Il va contenir des éléments qui vont servir à fournir des informations sur la page au navigateur, comme le titre de la page ou encore le type d’encodage utilisé pour que celui-ci puisse afficher les caractères de texte correctement. </p>
+			<p>L’élément <code>body</code> va lui contenir tous les éléments définissant les contenus « visibles » de la page, c’est-à-dire les contenus à destination de l’utilisateur et notamment les différents textes présents dans la page, les images, etc. </p>
+			<p>&nbsp;</p>
+			<h2>Les éléments title et meta</h2>
+			<p>Au sein de l’élément <code>head</code>, nous allons devoir à minima indiquer deux éléments qui vont permettre de donner des informations essentielles sur la page au navigateur : les éléments <code>title</code> et <code>meta</code>. </p>
+			<p>L’élément <code>title</code> va nous permettre d’indiquer le titre de la page en soi, qui ne doit pas être confondu avec les différents textes définis comme des titres dans la page. Ce titre de page est le texte visible sur le haut des onglets de votre navigateur par exemple : </p>
+			<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20220'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/titre-title-head-html.png" alt="Résultat visuel dans le navigateur de l&#039;élément HTML title" width="700" height="220" class="alignnone size-full wp-image-7027 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/titre-title-head-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/titre-title-head-html-300x94.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/titre-title-head-html-400x126.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+			<p>L’élément <code>meta</code> sert lui à transmettre des meta informations sur la page au navigateur. Cet élément possède de nombreux attributs différents. Le type d’informations transmis va dépendre de l’attribut que l’on va préciser. </p>
+			<p>Ici, ce qui nous intéresse va être de préciser le type d’encodage utilisé dans nos pages. Cela va permettre aux navigateurs d’afficher correctement nos différents textes avec les accents, les cédilles, etc. </p>
+			<p>Pour faire cela, nous allons utiliser l’attribut <code>charset</code> pour « characters set » c’est-à-dire « ensemble de caractères » de l’élément <code>meta</code> et lui fournir la valeur <code>utf-8</code>.</p>
+			<p>La valeur <code>utf-8</code> est de loin la valeur la plus utilisée sur le web et est la valeur de référence pour tous les alphabets latins. Cela va permettre à chacun de nos caractères de s’afficher correctement dans le navigateur. </p>
+			<p>Note : Lorsque vous travaillez en local vous devrez, avec certains éditeurs, renseigner également l’encodage de la page dans l’éditeur afin que le contenu de celle-ci s’affiche bien et notamment si vous utilisez un outil de prévisualisation de page fourni par votre éditeur. </p>
+			<p>Voilà tout pour la structure minimale d’une page HTML valide, qui représente toujours la première étape de création d’une vraie page web. Pour le moment, notre page ne possède pas de contenu visible. Nous allons en ajouter progressivement au cours des prochaines leçons. </p>
+			<p>&nbsp;</p>
+			<h2>Un mot sur l’imbrication des balises et des éléments</h2>
+			<p>Un autre concept qu’il vous faut comprendre absolument pour coder en HTML est la façon dont les éléments HTML s&rsquo;imbriquent les uns dans les autres.</p>
+			<p>Vous l’avez probablement remarqué : ci-dessus, nous avons placé des éléments HTML entre les balises ouvrantes et fermantes d’autres éléments (par exemple, les éléments <code>title</code> et <code>meta</code> ont été placés à l’intérieur de l’élément <code>head</code>).</p>
+			<p>On appelle cela l’imbrication. L’imbrication est l’une des fonctionnalités du HTML qui fait toute sa force (nous découvrirons réellement pourquoi plus tard, avec l’étude du CSS).</p>
+			<p>Cependant, comme toujours, on ne peut pas imbriquer des éléments HTML n’importe comment et il faut suivre des règles précises.</p>
+			<p>Ainsi, nous n’avons absolument pas le droit de « croiser » les balises des éléments ou, pour le dire plus clairement : le premier élément déclaré doit toujours être le dernier refermé, tandis que le dernier ouvert doit toujours être le premier fermé.</p>
+			<p>Par exemple, vous voyez que notre premier élément déclaré est l’élément <code>html</code>, qui contient les éléments <code>head</code> et <code>body</code>. L’élément <code>html</code> devra donc être le dernier élément refermé.</p>
+			<p>Faites bien attention à distinguer les éléments contenus dans d’autres et ceux qui sont au même niveau hiérarchique. Par exemple, ici, <code>title</code> et <code>meta</code> sont deux éléments « enfants » de l’élément <code>head</code> (car ils sont contenus à l’intérieur de celui-ci), mais sont deux « frères » : aucun des deux ne contient l’autre.</p>
+			<p>Le schéma ci-dessous présente toutes les situations valides d’imbrication d’éléments :</p>
+			<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20250'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/imbrication-balises-elements-html.png" alt="L&#039;ordre d&#039;imbrication des éléments en HTML" width="694" height="250" class="alignnone size-full wp-image-7025 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/imbrication-balises-elements-html.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/imbrication-balises-elements-html-300x108.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/imbrication-balises-elements-html-400x144.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+			<p>Pour savoir quand un élément doit être placé dans un autre, il faut penser en termes de « dépendance » : les informations transmises par l&rsquo;élément dépendent-elle d&rsquo;un autre ou sont elles totalement indépendantes ? Ce concept peut être complexe à se représenter lorsqu&rsquo;on début à peine, mais ne vous inquiétez pas en pratiquant un peu tout cela va très vite devenir évident. </p>
+			
+
+			</div>
+			
+		</div>
+		
+		 <!-- Fin de section de Squelette du HTML -->
+		 
+
+		 <!-- Debut de la section paragraphe -->
+		  <div id="Paragraphes">
+		  	<h3 id="Paragraphes">Les paragraphes"</h3>
+		  	<p>
+		  		Le HTML, sert à différencier d'un point de vue sémantique les différents objets que l'on peut rencontrer et dont on peut avoir besoin (paragraphes, titre, espace, images, etc.). <br><br>
+		  		Pour créer des paragraphes, tout d'abord, on va utiiser l'élément p.
+		  		On peut créer autant de paragraphes que l'on souhaite dans une page. Pour chaque nouveau paragraphe, il faut ouvrir une balise &lt;p&gt;. A chaque nouveau paragraphe, un retour à la ligne est automatiquement effectué. <br><br>
+		  		Si maintenant nous désirez créer un retour en ligne à l'interieur même d'un paragraphe, il faudra utiliser l'élément br (diminutif de break). <br><br>
+		  		Cet élément est constitué d'une seule balise orpheline, qu'on notera donc &lt;b&gt;. <br><br>
+		  		Pour créer des titres, on va utiliser les éléments h1, h2, h3, h4, h5 et h6. Pourquoi autant d'éléments différents? <br><br>
+		  		Pour pouvoir créer des titres de diverses imortances. Ainsi, un titre h1 sera considéré comme très important tandis qu'un titre h6 sera considera comme très peu important. <br><br>
+		  		En pratique, on n'utilisera que très rarement les titres de niveau h4, h5 et h6. Si vous vous interogez encore sur l'intérêt d'avoir tous ces éléments, pensez que cela très important pour le référencement entre autres. <br><br>
+		  		En effet: plus vous serez clair mieux un moteur de recherche vous comprendra, mieux vous serez référencé. <br><br>
+		  		Voilà ce que ça donne en image: <br>
+		  		<img src="img/z1.jpg"> <br>
+		  		Tout cela pour vous dire que la taille et le poids du texte rendu par votre navigateur n'est que le résultat d'une interprétation et n'est qu'une mise en forme automatique. Su vous avez compris cela, vous avez tout compris! <br><br>
+		  	</p>
+		  	
+		  </div>
+		 <!-- Fin de la section paragraphe -->
+
+		 <!-- Debut de la section liste -->
+		 <div id="Listes">
+		 	<h3 id="ancre">Les listes ordonnées et non-ordonnées</h3>
+		 	<div class="contenu">
+		 	Dans cette nouvelle leçon, nous allons voir à quoi servent les listes, découvrir les différents types de listes en HTML et apprendre à en créer.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Qu’est-ce qu’une liste HTML ? A quoi servent les listes ?</h2>
+		 	<p>Le HTML est un langage de sémantique : son rôle est de donner du sens aux différents contenus d’une page afin que ceux-ci soient correctement reconnus et affichés et que les navigateurs et les moteurs de recherche « comprennent » nos pages.</p>
+		 	<p>Les listes HTML répondent tout à fait à cet objectif puisqu’elles permettent d’ordonner du contenu. Ce contenu peut être hiérarchisé ou non. </p>
+		 	<p>Une liste en HTML est composée de différents éléments de listes. Visuellement une liste va ressembler à ceci : </p>
+		 	<ul>
+		 	<li>Premier élément de ma liste,</li>
+		 	<li>Deuxième élément de ma liste,</li>
+		 	<li>Troisième élément de ma liste.</li>
+		 	</ul>
+		 	<p>Les listes vont ainsi nous permettre de lister plusieurs éléments en les groupant sous un dénominateur commun qu’est la liste en soi. Les navigateurs et les moteurs de recherche vont donc comprendre qu’il y a une relation entre les différents éléments de liste. </p>
+		 	<p>Les listes vont donc déjà être très utiles pour apporter de la clarté et de l’ordre à nos documents. En plus de cela, nous allons également utiliser des listes HTML pour créer des menus de navigation (nous verrons comment plus tard dans ce cours).</p>
+		 	<p>Il existe deux grands types de listes en HTML : les listes ordonnées et les listes non-ordonnées. Il existe également un troisième type de liste un peu particulier et moins utilisé : les listes de définitions.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Les listes non ordonnées</h2>
+		 	<p>Les listes non-ordonnées vont être utiles pour lister des éléments sans hiérarchie ni ordre logique.</p>
+		 	<p>Par exemple, si je souhaite lister les mots « pomme », « vélo » et « guitare », sans plus de contexte, j’utiliserai une liste non-ordonnée.</p>
+		 	<p>En effet, on ne peut pas dégager de notion d’ordre, de hiérarchie ou de subordination entre ces trois termes (du moins pas sans un contexte précis).</p>
+		 	<p>Pour créer une liste non-ordonnée, nous allons avoir besoin d’un élément <code>ul</code> (pour « unordered list », ou « liste non-ordonnée » en français) qui va représenter la liste en soi ainsi que d’un élément <code>li</code> (« list item » ou « élément de liste ») pour chaque nouvel élément de liste. </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20340'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-non-ordonnee-html.png" alt="Création d&#039;un liste non ordonnée avec l&#039;élément HTML ul" width="700" height="340" class="alignnone size-full wp-image-7067 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-non-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-non-ordonnee-html-300x146.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-non-ordonnee-html-400x194.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20230'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-non-ordonnee-html.png" alt="Résultat visuel d&#039;une liste non ordonnée ul HTML" width="700" height="230" class="alignnone size-full wp-image-7068 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-non-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-non-ordonnee-html-300x99.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-non-ordonnee-html-400x131.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="223" data-theme-id="0" data-slug-hash="OvRQve" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.1" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/OvRQve/">Cours HTML CSS 2.8.1</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Comme vous pouvez le remarquer, on va placer les éléments <code>li</code> à l’intérieur de l’élément de liste <code>ul</code> (à partir de ce moment, bien indenter son code commence à être important pour ne pas se perdre). C’est tout à fait logique puisque les éléments de liste « appartiennent » à une liste en particulier. </p>
+		 	<p>Visuellement, des puces (les points noirs) apparaissent automatiquement devant chaque élément d’une liste non-ordonnée par défaut. Nous allons pouvoir changer ce comportement et personnaliser l’apparence de nos listes en CSS grâce notamment à la propriété <code>list-style-type</code> que nous étudierions plus tard dans ce cours.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Les listes ordonnées</h2>
+		 	<p>Au contraire des listes non-ordonnées, nous allons utiliser les listes ordonnées lorsqu’il y aura une notion d’ordre ou de progression logique ou encore de hiérarchie entre les éléments de notre liste.</p>
+		 	<p>Par exemple, si l’on souhaite lister les étapes naturelles de la vie, ou lorsque l’on crée un sommaire, on utilisera généralement des listes ordonnées.</p>
+		 	<p>Pour créer une liste ordonnée, nous allons cette fois-ci utiliser l’élément <code>ol</code> (pour « ordered list » ou « liste ordonnée ») pour définir la liste en soi et à nouveau des éléments <code>li</code> pour chaque élément de la liste. </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20525'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-ordonnee-html.png" alt="Création d&#039;une liste ordonnée avec l&#039;élément HTML ol" width="700" height="525" class="alignnone size-full wp-image-7069 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-ordonnee-html-300x225.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-ordonnee-html-400x300.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20380'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-ordonnee-html.png" alt="Résultat visuel de la création d&#039;une liste ordonnée ol HTML" width="700" height="380" class="alignnone size-full wp-image-7070 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-ordonnee-html-300x163.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-ordonnee-html-400x217.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="386" data-theme-id="0" data-slug-hash="zWKRaE" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.2" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/zWKRaE/">Cours HTML CSS 2.8.2</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Comme vous le voyez, ce sont cette fois-ci des numéros qui sont affichés devant chaque élément de la liste par défaut.</p>
+		 	<p>Encore une fois, nous allons pouvoir changer ce comportement et afficher différents styles de puces avec la propriété CSS <code>list-style-type</code>.</p>
+		 	<h3>Les attributs HTML des listes ordonnées</h3>
+		 	<p>En plus des propriétés CSS, on va pouvoir utiliser certains attributs HTML avec nos listes ordonnées pour modifier leur présentation. </p>
+		 	<p>Ici, vous devez absolument comprendre que ces attributs ne devraient pas exister à priori puisque le HTML ne devrait pas se soucier de la présentation mais devrait laisser l’apparence au CSS. </p>
+		 	<p>Cependant, les langages sont en constante évolution ce qui signifie que leur rôle n’est pas encore tout à fait fixé et que certains langages ne sont pas capables de faire certaines choses aujourd’hui. Ce sont les raisons principales pour l’existence de ces attributs que je vais vous présenter par souci d’exhaustivité. </p>
+		 	<p>Retenez simplement que vous devriez toujours privilégier l’utilisation du langage CSS pour la mise en forme des contenus HTML tant que vous le pouvez. </p>
+		 	<p>Commençons avec l’attribut <code>type</code> qui va nous permettre de changer l’apparence des puces d’une liste ordonnée. </p>
+		 	<p>Cet attribut existait autrefois également pour les listes non ordonnées mais a été déprécié pour celles-ci. Il est possible qu’il soit également déprécié dans le futur pour les listes ordonnées puisque le HTML ne devrait pas se charger de la mise en forme. </p>
+		 	<p>Pour cette raison, je vous déconseille de l’utiliser et vous conseille de préférer l’utilisation du CSS. Cependant, je vous présente tout de même les valeurs qu’on va pouvoir lui fournir par souci d’exhaustivité : </p>
+		 	<ul>
+		 	<li>« 1 » : valeur par défaut. Des chiffres apparaitront devant chaque élément de la liste ;</li>
+		 	<li>« I » : Des chiffres romains majuscules apparaitront devant chaque élément de la liste ;</li>
+		 	<li>« i » : Des chiffres romains minuscules apparaitront devant chaque élément de la liste ;</li>
+		 	<li>« A » : Des lettres majuscules apparaitront devant chaque élément de la liste ;</li>
+		 	<li>« a » : Des lettres minuscules apparaitront devant chaque élément de la liste.</li>
+		 	</ul>
+		 	<p>Voici également un exemple d’utilisation de cet attribut : </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20520'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-type-liste-ordonnee-html.png" alt="L&#039;attribut type des listes ordonnées en HTML" width="700" height="520" class="alignnone size-full wp-image-7071 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-type-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-type-liste-ordonnee-html-300x223.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-type-liste-ordonnee-html-400x297.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20380'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-type-liste-ordonnee-html.png" alt="Résultat visuel de l&#039;utilisation de l&#039;attribut type HTML" width="700" height="380" class="alignnone size-full wp-image-7072 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-type-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-type-liste-ordonnee-html-300x163.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-type-liste-ordonnee-html-400x217.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="376" data-theme-id="0" data-slug-hash="pLEaZE" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.3" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/pLEaZE/">Cours HTML CSS 2.8.3</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Notez que par défaut le premier élément d’une liste ordonnée va avoir comme puce le chiffre « 1 » ou la première lettre de l’alphabet « a ». On va pouvoir changer ce comportement et faire démarrer notre liste ordonnée à partir d’un point choisi grâce aux attributs HTML <code>start</code> ou <code>value</code>. </p>
+		 	<p>L’attribut <code>start</code> va nous permettre de choisir un point de départ pour notre liste ordonnée. On va donc le placer dans la balise ouvrante de l’élément représentant la liste <code>ol</code>. </p>
+		 	<p>L’attribut <code>value</code> va lui en revanche nous permettre de choisir la valeur de chaque puce d’éléments de liste. On va pouvoir ajouter un attribut <code>value</code> pour chaque élément <code>li</code>. Dans le cas où certains éléments <code>li</code> ne possèderaient pas d’attribut <code>value</code>, la valeur de leur puce va s’incrémenter normalement par rapport à la valeur de la puce de l’élément précédent (c’est-à-dire ajouter 1 par rapport à la puce précédente).</p>
+		 	<p>Notez que dans le cas où un attribut <code>start</code> est précisé pour la liste et un attribut <code>value</code> est précisé pour le premier élément de liste, l’attribut <code>value</code>, plus précis, va avoir la priorité et imposer sa valeur. </p>
+		 	<p>Voici quelques exemples d’utilisation de ces attributs :</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20940'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/attributs-start-value-liste-ordonnee-html.png" alt="Utilisation des attributs start et value HTML" width="700" height="940" class="alignnone size-full wp-image-7073 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/attributs-start-value-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attributs-start-value-liste-ordonnee-html-300x403.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attributs-start-value-liste-ordonnee-html-400x537.png 400w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attributs-start-value-liste-ordonnee-html-223x300.png 223w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20700'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attributs-start-value-liste-ordonnee-html.png" alt="Résultat de l&#039;exemple d&#039;utilisation des attributs HTML start et value " width="700" height="700" class="alignnone size-full wp-image-7074 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attributs-start-value-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attributs-start-value-liste-ordonnee-html-300x300.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attributs-start-value-liste-ordonnee-html-100x100.png 100w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attributs-start-value-liste-ordonnee-html-400x400.png 400w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attributs-start-value-liste-ordonnee-html-150x150.png 150w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="717" data-theme-id="0" data-slug-hash="mxrXjo" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.4" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/mxrXjo/">Cours HTML CSS 2.8.4</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Finalement, nous allons pouvoir inverser le compte des puces des éléments de liste ordonnées grâce à l’attribut <code>reversed</code>.  Le premier élément de la liste aura alors la puce avec la valeur la plus élevée, puis on enlèvera un par nouvel élément jusqu’à arriver à « 1 » ou « a » pour le dernier élément de liste par défaut. </p>
+		 	<p>L’attribut <code>reversed</code> ne possède qu’une valeur qui est <code>reversed</code> (identique au nom de l’attribut, comme pour tous les attributs qui ne possèdent qu’une valeur en HTML). Comme <code>reversed</code> ne possède qu’une valeur, la valeur est dite évidente et peut être omise. </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20485'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-reversed-liste-ordonnee-html.png" alt="Utilisation de l&#039;attribut HTML reversed" width="700" height="485" class="alignnone size-full wp-image-7075 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-reversed-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-reversed-liste-ordonnee-html-300x208.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/attribut-reversed-liste-ordonnee-html-400x277.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20370'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-reversed-liste-ordonnee-html.png" alt="Résultat exemple utilisation attribut HTML reversed" width="700" height="370" class="alignnone size-full wp-image-7076 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-reversed-liste-ordonnee-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-reversed-liste-ordonnee-html-300x159.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-attribut-reversed-liste-ordonnee-html-400x211.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="344" data-theme-id="0" data-slug-hash="wmzyQB" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.5" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/wmzyQB/">Cours HTML CSS 2.8.5</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>&nbsp;</p>
+		 	<h2>Les listes de définitions</h2>
+		 	<p>Les listes de définitions, encore appelées « listes de descriptions » vont nous permettre de lister des termes et d’ajouter des définitions ou descriptions pour chacun de ces termes.</p>
+		 	<p>Pour créer une liste de définitions, nous allons cette fois-ci utiliser l’élément <code>dl</code> signifiant « description list » ou « liste de description / définition » en français pour définir la liste en soi, puis des éléments <code>dt</code> (description term) pour chaque élément à décrire et enfin l’élément <code>dd</code> pour la définition / description en soi.</p>
+		 	<p>Pensez bien lorsque vous créez une liste de définitions à toujours placer le terme à définir avant sa définition, c’est-à-dire l’élément <code>dt</code> avant l’élément <code>dd</code>. Cela est normalement assez intuitif.</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20320'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-definitions-html.png" alt="Les listes de définition en HTML" width="700" height="320" class="alignnone size-full wp-image-7077 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-definitions-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-definitions-html-300x137.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liste-definitions-html-400x183.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20205'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-definitions-html.png" alt="Résultat de l&#039;utilisation de listes de définitions HTML" width="700" height="205" class="alignnone size-full wp-image-7078 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-definitions-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-definitions-html-300x88.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-liste-definitions-html-400x117.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="218" data-theme-id="0" data-slug-hash="Xydbpo" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.6" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/Xydbpo/">Cours HTML CSS 2.8.6</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>&nbsp;</p>
+		 	<h2>L’imbrication de listes</h2>
+		 	<p>Finalement, sachez qu’il est tout-à-fait possible d’imbriquer une liste dans une autre en suivant quelques règles simples.</p>
+		 	<p>Pour imbriquer une liste dans une autre, il suffit de définir une nouvelle liste à l’intérieur de l’un des éléments d’une autre liste, juste avant la balise fermante de cet élément.</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20500'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/listes-imbriquees-html.png" alt="Imbrication de listes en HTML" width="700" height="500" class="alignnone size-full wp-image-7079 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/listes-imbriquees-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/listes-imbriquees-html-300x214.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/listes-imbriquees-html-400x286.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20300'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-listes-imbriquees-html.png" alt="Listes HTML imbriquées" width="700" height="300" class="alignnone size-full wp-image-7080 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-listes-imbriquees-html.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-listes-imbriquees-html-300x129.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-listes-imbriquees-html-400x171.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="374" data-theme-id="0" data-slug-hash="GwZJWj" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 2.8.7" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/GwZJWj/">Cours HTML CSS 2.8.7</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Comme vous pouvez le voir, il devient ici très important de bien indenter son code afin de ne pas se perdre au milieu de nos listes !</p>
+		 	<p>Notez que l’on peut imbriquer autant de listes que l’on souhaite les unes dans les autres. Cependant, pour des raisons évidentes de lisibilité, il est conseillé de ne pas créer plus de niveaux de listes que ce qui est strictement nécessaire pour servir vos besoins. </p>
+		 	
+
+		 	</div>
+		 	
+		 </div>
+		 <!-- Fin de la section liste -->
+
+		 <!-- Debut de la section lien -->
+
+		 <div id="Liens">
+		 	<h2 id="ancre">Les Liens internes et les Liens externes</h2> <br>
+		 	<div class="contenu">
+		 	Les liens hypertextes sont l&rsquo;une des fondations du HTML que est, rappelons-le, un langage de marquage hypertexte justement. </p>
+		 	<p>Dans cette nouvelle leçon, nous allons découvrir et expliquer à quoi correspond un lien en HTML et allons apprendre à créer différents « types » de liens en HTML, que ce soit des liens ramenant à un autre endroit d’une même page (liens ancres), des liens menant vers d’autres pages d’un même site (liens internes) ou des liens envoyant l’utilisateur vers un autre site (liens externes).</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Définition d’un lien HTML</h2>
+		 	<p>Les liens en HTML vont nous servir à créer des ponts entre différentes pages d’un même site ou de sites différents. Le principe d’un lien est le suivant : en cliquant sur une ancre (qui est la partie visible par l’utilisateur d’un lien et qui peut être un texte comme une image), nos utilisateurs vont être redirigés vers une page cible.</p>
+		 	<p>Il existe deux types principaux de liens hypertextes en HTML :</p>
+		 	<ul>
+		 	<li>Les liens internes qui vont servir à naviguer d’une page à l’autre dans un même site ;</li>
+		 	<li>Les liens externes qui vont envoyer les utilisateurs vers une page d’un autre site.</li>
+		 	</ul>
+		 	<p>Ces deux types de liens vont être l’objet d’enjeux et d’implications différents en termes d’optimisation du référencement (SEO) et vont pouvoir être créés de façons différentes en HTML.</p>
+		 	<p>Nous allons également pouvoir utiliser les liens en HTML pour naviguer au sein d’une même page et renvoyer à un endroit précis de celle-ci. Cela est utile pour fournir des accès ou des repères rapides à nos utilisateurs dans le cas d’un page très longue. </p>
+		 	<p>Nous appelons ce type de liens faits au sein d’une même page des liens « ancres » tout simplement (même si ce terme peut porter à confusion car le terme « ancre » est aussi utilisé pour définir la partie visible et cliquable d’un lien). </p>
+		 	<p>Dans chacun de ces cas, nous allons devoir utiliser l’élément HTML <code>a</code> accompagné de son attribut <code>href</code> pour créer un lien en HTML.</p>
+		 	<p>Notez que les liens sont également un aspect fondamental d’une stratégie d’optimisation de référencement (SEO), que ce soit dans le cas de liens internes (pour effectuer ce qu’on appelle un maillage interne et donner plus de valeur à certaines de nos pages aux yeux de Google) ou de liens externes qui sont un des critères principaux de classement pour Google. Il est donc très important de bien les comprendre et les maitriser !</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Création de liens : l’élément a et son attribut href</h2>
+		 	<p>Quel que soit le type de liens que l’on souhaite créer en HTML (liens internes, des liens externes, ou des liens vers un autre endroit d’une même page), nous utiliserons toujours l’élément <code>a</code> qui est l’abréviation de « anchor » ou « ancre » en français accompagné de son attribut <code>href</code> pour « hypertext reference » ou « référence hypertexte » en français.</p>
+		 	<p>L’élément HTML <code>a</code> est composé d’une paire de balises (balises ouvrante et fermante) et d’un contenu entre les balises que l’on va appeler “ancre”. Ce contenu peut être un texte, une image, etc. et sera la partie visible et cliquable du lien pour les utilisateurs.</p>
+		 	<p>L’attribut <code>href</code> va nous servir à indiquer la cible du lien, c’est-à-dire l’endroit où l’utilisateur doit être envoyé après avoir cliqué sur le lien. Nous allons indiquer cette cible en valeur de l’attribut <code>href</code>.</p>
+		 	<p>D’un point de vue du code, la seule chose qui va changer pour créer un lien ancre plutôt qu’interne ou interne plutôt qu’externe va être la façon dont on va construire la valeur qu’on va passer à l’attribut <code>href</code>.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Créer des liens externes en HTML</h2>
+		 	<p>Un lien externe est un lien qui part d’une page d’un site et ramène les utilisateurs vers une autre page d’un autre site. </p>
+		 	<p>Pour créer un lien vers une page d’un autre site en HTML (ou lien externe), il va falloir indiquer l’adresse complète de la page (c’est-à-dire son URL) en valeur de l’attribut <code>href</code> de notre lien.</p>
+		 	<p>Imaginons par exemple que nous voulions créer un lien vers la page d’accueil de Wikipédia. L’URL de cette page est la suivante : https://www.wikipedia.org/.</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20770%20225'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/lien-externe-html-a-href.png" alt="Création d&#039;un lien externe en HTML avec l&#039;élément a et l&#039;attribut href" width="770" height="225" class="alignnone size-full wp-image-7083 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/lien-externe-html-a-href.png 770w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/lien-externe-html-a-href-300x88.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/lien-externe-html-a-href-400x117.png 400w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/lien-externe-html-a-href-768x224.png 768w" data-sizes="(max-width: 770px) 100vw, 770px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20150'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-lien-externe-html-a-href.png" alt="Résultat exemple création lien externe HTML" width="694" height="150" class="alignnone size-full wp-image-7084 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-lien-externe-html-a-href.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-lien-externe-html-a-href-300x65.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-lien-externe-html-a-href-400x86.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+		 	<p data-height="181" data-theme-id="0" data-slug-hash="jxGVWK" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Les liens en HTML 1" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/jxGVWK/">Les liens en HTML 1</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Comme vous le voyez, on utilise bien un élément <code>a</code> pour créer un lien externe en HTML. On place notre attribut <code>href</code> au sein de la balise ouvrante de cet élément. Ici, on précise en valeur l’adresse (URL) de la page d’accueil de Wikipédia.</p>
+		 	<p>Entre les deux balises, nous plaçons la partie visible et cliquable (l’ancre) de notre lien. Ici, cela correspond au texte « la home de Wikipédia ». Les utilisateurs vont pouvoir cliquer sur ce texte pour être renvoyés vers la page d’accueil de Wikipedia. </p>
+		 	<p>Note : Ici, nous avons choisi de placer un texte comme ancre de notre lien, mais rien ne nous empêche de placer une image à la place afin de créer une image cliquable.</p>
+		 	<p>Vous pouvez remarquer que le navigateur applique automatiquement des styles à la partie cliquable de nos liens :</p>
+		 	<ul>
+		 	<li>le texte (notre ancre) est de couleur différente (bleu avant de cliquer puis volet une fois le lien visité) ;</li>
+		 	<li>le texte est souligné ;</li>
+		 	<li>le curseur de notre souris change de forme lorsqu’on passe sur le lien.</li>
+		 	</ul>
+		 	<p>Nous allons bien évidemment pouvoir changer ces comportements en appliquant nos propres styles CSS à nos éléments <code>a</code>. Nous verrons comment faire cela plus tard dans ce cours.</p>
+		 	<p>Bon à savoir : Lorsque l’attribut <code>href</code> prend une URL complète en valeur, on parle de valeur absolue (car celle-ci est fixe et ne dépend de rien). Les liens externes utilisent toujours des valeurs absolues. On parle de valeur absolue en opposition aux valeurs dites relatives, qui sont dans ce contexte des valeurs qui vont indiquer l’emplacement de la page cible relativement à la page source du lien.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Créer des liens internes en HTML</h2>
+		 	<p>Le deuxième grand type de liens que l&rsquo;on va pouvoir créer en HTML correspond aux liens internes, c&rsquo;est-à-dire à des liens renvoyant vers d&rsquo;autres pages d&rsquo;un même site. </p>
+		 	<h3>Explication du fonctionnement des liens internes</h3>
+		 	<p>Nous allons avoir plusieurs solutions pour créer des liens internes. Tout d&rsquo;abord, nous allons tout simplement pouvoir faire exactement comme pour les liens externes et indiquer l&rsquo;adresse complète (adresse absolue) de la page cible du lien en valeur de l&rsquo;attribut <code>href</code></p>
+		 	<p>Cependant, si cette première manière de faire semble tout à fait fonctionner et être la plus simple à priori, ce n&rsquo;est pas du tout la plus optimisée d&rsquo;un point de vue de l&rsquo;utilisation des ressources et elle peut même s&rsquo;avérer problématique selon comment votre site est construit (notamment si vos URLs sont construites dynamiquement). </p>
+		 	<p>Pour ces raisons, nous préciserons généralement plutôt une valeur de type relatif en valeur de l&rsquo;attribut <code>href</code> de nos liens internes en HTML. </p>
+		 	<p>On dit que la valeur est relative car on va devoir indiquer l’adresse de la page de destination relativement à l’adresse de la page de départ (c’est-à-dire celle à partir de laquelle on fait notre lien).</p>
+		 	<p>Comment savoir quelle valeur relative utiliser ? Pour bien comprendre comment fonctionnent les valeurs relatives, vous devez avant tout savoir ce qu&rsquo;est un site web. </p>
+		 	<p>Un site web n&rsquo;est qu&rsquo;un ensemble de fichiers et de ressources (pages de code de différents types et fichiers médias comme des images, etc.) liés entre eux. </p>
+		 	<p>Toutes ces ressources vont être hébergées (stockées) sur un ordinateur très puissant et constamment connecté à Internet qu’on appelle serveur, dans un dossier principal qu’on va appeler la racine d&rsquo;un site. </p>
+		 	<p>Pour pouvoir stocker nos différentes ressources sur un serveur et faire en sorte que notre site soit tout le temps accessible via Internet, nous passons généralement par un hébergeur qui va nous louer un serveur ou une partie d’un de ses serveurs. </p>
+		 	<p>Dans ce dossier racine, il va très souvent y avoir d&rsquo;autres dossiers (des sous-dossiers donc), des fichiers, des images, etc. </p>
+		 	<p>Par exemple, voici une première image de la racine de l&rsquo;ancienne version de mon site (à laquelle j&rsquo;accède depuis l&rsquo;interface d&rsquo;administration de mon hébergeur) : </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201102%20615'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-1.png" alt="Racine de mon site" width="1102" height="615" class="alignnone size-full wp-image-7085 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-1.png 1102w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-1-300x167.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-1-400x223.png 400w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-1-768x429.png 768w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-1-1024x571.png 1024w" data-sizes="(max-width: 1102px) 100vw, 1102px" /></p>
+		 	<p>Vous pouvez voir différents fichiers et ressources et des dossiers. En cliquant sur le dossier « html-css » par exemple, on va trouver de nouveaux fichiers et dossiers : </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201106%20516'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-2.png" alt="Structure site dossier" width="1106" height="516" class="alignnone size-full wp-image-7086 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-2.png 1106w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-2-300x140.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-2-400x187.png 400w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-2-768x358.png 768w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-2-1024x478.png 1024w" data-sizes="(max-width: 1106px) 100vw, 1106px" /></p>
+		 	<p>Puis en explorant le contenu du dossier « cours-complet » :</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201105%20551'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-3.png" alt="Structure site fichier" width="1105" height="551" class="alignnone size-full wp-image-7087 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-3.png 1105w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-3-300x150.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-3-400x199.png 400w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-3-768x383.png 768w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/structure-site-dossier-racine-3-1024x511.png 1024w" data-sizes="(max-width: 1105px) 100vw, 1105px" /></p>
+		 	<p>Pour lier ces différents fichiers et ressources entre eux (et donc offrir entre autres à nos utilisateurs la possibilité de naviguer de l’un à l’autre), nous allons utiliser des valeurs relatives, c&rsquo;est-à-dire que nous allons préciser l&#8217;emplacement de la ressource que l&rsquo;on souhaite utiliser (ou vers laquelle on souhaite renvoyer) relativement à l&#8217;emplacement de la page / ressource qui souhaite l&rsquo;utiliser (la page de départ). </p>
+		 	<p>C’est comme cela que nous allons procéder dans le cas précis de la création de liens internes : nous allons préciser en valeur de l&rsquo;attribut <code>href</code> l&#8217;emplacement de la page cible (page de destination) par rapport à l&#8217;emplacement sur le serveur de la page source.</p>
+		 	<p>Trois cas vont alors se présenter à nous : </p>
+		 	<ol>
+		 	<li>Le cas où les deux pages (source et destination) se trouvent dans un même dossier ;</li>
+		 	<li>Le cas où la page de destination se trouve dans un sous dossier par rapport à la page source ;</li>
+		 	<li>Le cas où la page de destination se trouve dans un dossier parent par rapport à la page source.</li>
+		 	</ol>
+		 	<p>Pour chacun de ces cas, nous allons construire la valeur de notre attribut <code>href</code> de manière différente : </p>
+		 	<ul>
+		 	<li>Si les deux pages se situent dans le même dossier, alors on pourra se contenter de préciser le nom de la page cible/de destination (avec son extension) en valeur de l&rsquo;attribut <code>href</code> ;</li>
+		 	<li>Si la page cible se situe dans un sous dossier par rapport à la page à partir de laquelle on fait un lien, alors on précisera le nom du sous dossier suivi d&rsquo;un slash suivi du nom de la page cible en valeur de l&rsquo;attribut <code>href</code> ;</li>
+		 	<li>Si la page cible se situe dans un dossier parent par rapport à la page de départ, alors il faudra indiquer deux points suivi d&rsquo;un slash suivi du nom de la page de destination en valeur de l&rsquo;attribut <code>href</code>.</li>
+		 	</ul>
+		 	<h3>Exemples pratiques de création de liens internes</h3>
+		 	<p>Pour illustrer cela, je vous propose de créer un premier dossier sur le bureau de votre ordinateur. Nous imaginerons que ce dossier correspond à la racine d&rsquo;un site Internet et nous pouvons par exemple l&rsquo;appeler <code>racine</code>. </p>
+		 	<p>Dans ce dossier, vous allez créer une première page HTML que vous pourrez appeler <code>home.html</code> et un second dossier qu&rsquo;on peut appeler <code>cours</code> par exemple. </p>
+		 	<p>Dans ce sous dossier <code>cours</code>, je vous propose de créer deux pages <code>presentation.html</code> et <code>livres.html</code> par exemple ainsi qu&rsquo;un troisième dossier qu&rsquo;on pourra appeler <code>code</code>. </p>
+		 	<p>Dans ce dernier dossier <code>code</code>, nous créerons finalement une dernière page qu&rsquo;on appellera </code>liens.html</code>. </p>
+		 	<p>N&rsquo;hésitez pas à télécharger directement la structure complète en <a href="https://www.pierre-giraud.com/wp-content/uploads/2019/07/racine.zip">cliquant ici</a> (dossier à dézipper et à placer sur votre bureau ; le téléchargement devrait démarrer dès que vous cliquez). </p>
+		 	<p>L&rsquo;idée ici va être de faire des liens entre ces différentes pages. Encore une fois, vous pouvez imaginer que tout ce qui se trouve au sein de votre dossier <code>racine</code> est l&rsquo;équivalent de la structure d&rsquo;un site Internet (même si dans notre cas nous travaillons bien évidemment en local).</p>
+		 	<p>A partir de notre page <code>home.html</code>, on veut créer trois liens : </p>
+		 	<ul>
+		 	<li>Un vers la page <code>presentation.html</code> située dans le sous dossier <code>cours</code> ;</li>
+		 	<li>Un vers la page <code>livres.html</code> située dans le sous dossier <code>cours</code> ;</li>
+		 	<li>Un vers la page <code>liens.html</code> située dans le sous-sous dossier <code>code</code> ;</li>
+		 	</ul>
+		 	<p>Voici comment on va s&rsquo;y prendre : </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20710%20360'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-sous-dossier.png" alt="Création liens internes HTML avec l&#039;élément a 1" width="710" height="360" class="alignnone size-full wp-image-7090 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-sous-dossier.png 710w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-sous-dossier-300x152.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-sous-dossier-400x203.png 400w" data-sizes="(max-width: 710px) 100vw, 710px" /></p>
+		 	<p>Ici, on voit bien que pour créer un lien vers une page située dans un sous dossier, il faut indiquer le nom du sous dossier suivi d&rsquo;un slash suivi du nom de la page en valeur de l&rsquo;attribut <code>href</code>. </p>
+		 	<p>Vous pouvez également remarquer que si la page cible du lien se situe dans un sous-sous dossier, alors il faudra préciser le nom du sous dossier suivi d&rsquo;un slash suivi du nom du sous dossier puis à nouveau d&rsquo;un slash et finalement le nom de la page de destination en valeur de l&rsquo;attribut <code>href</code>. </p>
+		 	<p>Bon à savoir : Il faudra indiquer le nom de tous les sous dossiers traversés pour atteindre la page de destination à partir de la page de départ en valeur de l&rsquo;attribut <code>href</code>.</p>
+		 	<p>On va également créer trois liens à partir de notre page <code>presentation.html</code> : </p>
+		 	<ul>
+		 	<li>Un vers la page <code>home.html</code> située dans le dossier parent <code>racine</code> ;</li>
+		 	<li>Un vers la page <code>livres.html</code> située dans le même dossier <code>cours</code> ;</li>
+		 	<li>Un vers la page <code>liens.html</code> située dans le sous dossier <code>code</code> ;</li>
+		 	</ul>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20360'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html.png" alt="Création liens internes HTML avec l&#039;élément a 2" width="694" height="360" class="alignnone size-full wp-image-7088 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-300x156.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-400x207.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+		 	<p>Ici, pas de surprise : </p>
+		 	<ul>
+		 	<li>On utilise la notation « ../home.html » pour créer un lien vers la page « home.html » située dans un dossier parent ;</li>
+		 	<li>La page « livres.html » est située dans le même dossier que la page « presentation.html », on se contente donc de préciser son nom en valeur de l&rsquo;attribut <code>href</code> ;</li>
+		 	<li>La page « liens.html » est située dans le sous dossier « code », on utilise donc la notation « code/liens.html ».</li>
+		 	</ul>
+		 	<p>Finalement, on va à nouveau vouloir créer trois liens à partir de la page <code>liens.html</code> vers :</p>
+		 	<ul>
+		 	<li>La page <code>home.html</code> située dans le dossier parent <code>racine</code> ;</li>
+		 	<li>La page <code>presentation.html</code> située dans le dossier parent <code>cours</code> ;</li>
+		 	<li>La page <code>livres.html</code> située dans le dossier parent <code>cours</code>.</li>
+		 	</ul>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20360'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-parent.png" alt="Création liens internes HTML avec l&#039;élément a 3" width="694" height="360" class="alignnone size-full wp-image-7089 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-parent.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-parent-300x156.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-parent-400x207.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+		 	<p>On va donc utiliser ici la notation <code>../</code> pour signifier que les pages de destination se trouvent dans des dossiers parents par rapport à notre page de départ. Notez qu&rsquo;on précise deux fois <code>../</code> pour créer un lien vers notre page « home.html » tout simplement car cette page est située dans un dossier deux niveaux au-dessus de la page « liens.html ».</p>
+		 	<div class="info">Bon à savoir : On indiquera autant de fois <code>../</code> en valeur de l&rsquo;attribut <code>href</code> qu&rsquo;il faudra traverser de dossiers pour atteindre la page de destination à partir de la page de départ.</div>
+		 	<p>A noter : Il est possible que vous deviez un jour faire un lien vers une page qui se situe dans un autre dossier qui n&rsquo;est pas un ascendant (parent) ou un descendant (enfant) direct de la page de départ. Dans ce cas-là, vous devrez utiliser un mélange de <code>../</code> et de noms de dossiers en valeur de l&rsquo;attribut <code>href</code>. </p>
+		 	<p>Pour illustrer cela, on peut créer un nouveau dossier <code>seo</code> dans le dossier <code>cours</code> et placer une page qu&rsquo;on va appeler <code>referencement.html</code> dedans. L&rsquo;idée va ici de faire un lien de la page <code>liens.html</code> vers <code>referencement.html</code> et inversement. Voici comment on va s&rsquo;y prendre :</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20735%20380'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-cousin.png" alt="Création lien interne HTML vers dossier cousin" width="735" height="380" class="alignnone size-full wp-image-7091 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-cousin.png 735w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-cousin-300x155.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-internes-html-dossier-cousin-400x207.png 400w" data-sizes="(max-width: 735px) 100vw, 735px" /></p>
+		 	<p>Ici, on indique qu&rsquo;il faut commencer par remonter dans le dossier parent <code>cours</code> puis ensuite aller dans le dossier <code>seo</code> pour accéder à la page <code>referencement.html</code> à partir de la page <code>liens.html</code>. N&rsquo;hésitez pas à deviner le code pour aller dans l&rsquo;autre sens, ça vous fera un bon exercice !</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Ouvrir un lien dans un nouvel onglet grâce à l&rsquo;attribut target</h2>
+		 	<p>Jusqu’à présent, lorsque nous cliquions sur les liens créés en HTML, nous étions immédiatement redirigés vers la nouvelle page et notre page cible s&rsquo;ouvrait dans le même emplacement (le même cadre ou « frame ») que le lien de départ.</p>
+		 	<p>Souvent, si vous avez un site, vous voudrez généralement que le lien s’ouvre dans un nouvel onglet afin que le visiteur ne perde pas la page de votre site. On va pouvoir faire cela avec l’attribut <code>target</code>.</p>
+		 	<p>L’attribut <code>target</code> va nous permettre de choisir où doit s’ouvrir notre page de destination. En pratique, nous utiliserons très souvent la valeur <code>_blank</code> qui spécifie que la nouvelle page doit s’ouvrir dans un nouvel onglet.</p>
+		 	<p>Voici un exemple pratique avec un lien externe menant vers la page d&rsquo;accueil de Wikipédia et s’ouvrant dans un nouvel onglet :</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20694%20365'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-html-attribut-target.png" alt="Utilisation attribut target liens HTML" width="694" height="365" class="alignnone size-full wp-image-7092 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-html-attribut-target.png 694w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-html-attribut-target-300x158.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/liens-html-attribut-target-400x210.png 400w" data-sizes="(max-width: 694px) 100vw, 694px" /></p>
+		 	<p data-height="136" data-theme-id="0" data-slug-hash="XqeYzv" data-default-tab="html,result" data-user="pierregiraud" data-embed-version="2" data-pen-title="Les liens en HTML 3" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/XqeYzv/">Les liens en HTML 3</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Pour information, voici les différentes valeurs que peut prendre l&rsquo;attribut HTML <code>target</code> afin de modifier le comportement de nos liens HTML :</p>
+		 	<table>
+		 	<tr>
+		 	<th>Valeur de target</th>
+		 	<th>Comportement</th>
+		 	</tr>
+		 	<tr>
+		 	<td>_self</td>
+		 	<td>Valeur par défaut : la page cible s&rsquo;ouvre dans le même emplacement (cadre ou « frame ») que là où l&rsquo;utilisateur a cliqué</td>
+		 	</tr>
+		 	<tr>
+		 	<td>_blank</td>
+		 	<td>La page cible s&rsquo;ouvre dans un nouvel onglet ou dans une nouvelle fenêtre</td>
+		 	</tr>
+		 	<tr>
+		 	<td>_parent</td>
+		 	<td>La page cible s&rsquo;ouvre dans la cadre (frame) de niveau immédiatement supérieur par rapport à l&#8217;emplacement du lien</td>
+		 	</tr>
+		 	<tr>
+		 	<td>_top</td>
+		 	<td>La page cible s&rsquo;ouvre dans la fenêtre hôte (par dessus le frameset)</td>
+		 	</tr>
+		 	<tr>
+		 	<td>Nom du cadre (frame)</td>
+		 	<td>Ouverture de la page cible dans le cadre portant le nom cité (en valeur de l&rsquo;attribut <code>name</code>)</td>
+		 	</tr>
+		 	</table>
+		 	<p>&nbsp;</p>
+		 	<h2>Créer des liens vers une autre partie d&rsquo;une même page en HTML</h2>
+		 	<p>Dans certains cas, lorsque vous construisez une page très longue, il va pouvoir être intéressant de proposer un sommaire avec des liens cliquables qui vont transporter l&rsquo;utilisateur directement à un endroit précis de la page. </p>
+		 	<p>Nous allons également pouvoir créer ce type de liens (parfois appelé liens « ancre ») avec notre élément HTML <code>a</code> ainsi qu&rsquo;avec un attribut <code>id</code> qui va nous servir à identifier l&rsquo;endroit de la page où l&rsquo;utilisateur doit être renvoyé.</p>
+		 	<p>L’attribut <code>id</code> sert, comme son nom l’indique, à identifier un élément HTML en particulier dans une page pour ensuite pouvoir le cibler précisément (pour pouvoir lui appliquer des styles CSS entre autres). </p>
+		 	<p>Nous étudierons le fonctionnement de l’attribut <code>id</code> en détail plus tard dans ce cours. Pour le moment, retenez simplement que chaque <code>id</code> dans une page doit posséder une valeur unique puisqu’encore une fois un <code>id</code> sert à identifier précisément un élément en particulier. </p>
+		 	<p>Pour créer un lien de type « ancre », nous allons devoir procéder en deux étapes : tout d&rsquo;abord, nous allons attribuer un attribut <code>id</code> aux différents éléments de notre page au niveau desquels on souhaite renvoyer nos visiteurs. </p>
+		 	<p>Ensuite, nous allons créer nos liens de renvoi en soi. Pour cela, nous allons passer à nos différents attributs <code>href</code> les valeurs correspondantes aux noms de mes <code>id</code> précédés d&rsquo;un dièse (symbole #). </p>
+		 	<p>Voyons immédiatement comment créer ce type de lien en pratique. Pour cela, il va nous falloir une page très longue ou nous allons devoir réduire en CSS la largeur d&rsquo;affichage du texte pour lui faire prendre plus de ligne et créer une barre de défilement (scrolling). </p>
+		 	<p data-height="265" data-theme-id="0" data-slug-hash="ELwRMV" data-default-tab="html,result" data-user="pierregiraud" data-embed-version="2" data-pen-title="Les liens en HTML 4" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/ELwRMV/">Les liens en HTML 4</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Dans l&rsquo;exemple ci-dessus, j’ai créé une liste de type sommaire au début de ma page car celle-ci est très longue et j&rsquo;ai accolé un <code>id</code> à chacun de mes titres <code>h2</code>. </p>
+		 	<p>Chaque élément de mon sommaire va correspondre à une partie vers laquelle je souhaite envoyer mes visiteurs. Je vais donc placer un élément de lien HTML <code>a</code> dans chacun des éléments de liste. </p>
+		 	<p>Ici, je vous invite à regarder attentivement les valeurs données à mes différents attributs <code>href</code> : vous remarquez que les différentes valeurs correspondent aux noms de mes <code>id</code> précédés d&rsquo;un dièse (symbole #), symbole qui sert justement à cibler un <code>id</code> en CSS. </p>
+		 	<p>Lorsqu&rsquo;on clique sur un élément du sommaire, nous sommes renvoyés directement à la partie de la page correspondante.  </p>
+		 	<p>&nbsp;</p>
+		 	<h2>Utiliser une image en ancre de lien HTML</h2>
+		 	<p>Nous n’avons pas encore étudié les images et je ne veux pas vous donner trop d’informations d’un coup afin que vous puissiez vous concentrer sur le sujet actuellement traité. </p>
+		 	<p>Cependant, sachez qu’il va être tout à fait possible d’utiliser une image à la place d’un texte comme ancre ou contenu cliquable pour un lien. Nous verrons comment faire cela dans le chapitre réservé à l’insertion d’images en HTML. </p>
+		 	
+
+		 	</div>
+		 	
+		 </div>
+		 <!-- Fin de la section lien -->
+
+		 <!-- Debut de section balises en blocs -->
+
+		 <div id="Balises en blocs">
+		 	<h3 id="ancre">Les Balises en blocs</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+		 <!-- Fin de section balises en blocs -->
+
+		 <!-- Debut section balises en lignes -->
+		 <div id="Balises en lignes">
+		 	<h3 id="ancre">Les Balises en lignes</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section balises en lignes -->
+
+
+		 <!-- Debut section tableaux -->
+
+		 <div id="Tableaux">
+		 	<h3 id="ancre">Les Tableaux</h3>
+		 	<div class="contenu">
+		 	Un tableau en HTML représente un ensemble organisé de données. Pour créer un tableau en HTML nous allons utiliser l’élément <code>table</code> qui signifie « tableau » en anglais.</p>
+		 	<p>Les tableaux sont une notion importante du HTML et il est important que vous sachiez comment les créer. Dans cette leçon, nous allons voir comment créer un tableau simple.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Définition et utilité des tableaux HTML</h2>
+		 	<p>Les tableaux en HTML vont nous permettre de présenter des données de manière organisée et sous une certaine forme pour les structurer et les rendre compréhensibles pour les navigateurs, moteurs de recherche et utilisateurs.</p>
+		 	<p>Historiquement, de nombreux développeurs et web designer se sont servi à tort des tableaux pour mettre en forme de pages web. En effet, à l’époque, utiliser des tableaux semblait être un bon moyen de contrôler l’affichage et le placement des différents éléments d’une page en les plaçant dans des cellules.</p>
+		 	<p>Dans cette lignée, de nombreux attributs HTML permettant de modifier / mettre en forme un tableau avaient été créés.</p>
+		 	<p>Cependant, cette utilisation est à bannir aujourd’hui. En effet, je vous rappelle que le rôle du HTML est et a toujours été de structurer du contenu et de lui donner du sens, pas de mettre en forme ledit contenu (ce qui est le rôle du CSS).</p>
+		 	<p>Ainsi, vous comprendrez également que pour mettre en forme visuellement un tableau, nous n’utiliserons pas les attributs HTML (qui sont en grande majorité dépréciés) mais plutôt des propriétés CSS.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Les éléments constitutifs essentiels d’un tableau HTML</h2>
+		 	<p>Un tableau est un ensemble de lignes et de colonnes. L’intersection entre une ligne et une colonne est une cellule de tableau.</p>
+		 	<p>Pour créer un tableau fonctionnel en HTML, nous allons devoir utiliser à minima 3 éléments :</p>
+		 	<ul>
+		 	<li>Un élément <code>table</code> (« tableau » en français) qui va définir le tableau en soi ;</li>
+		 	<li>Des éléments <code>tr</code>, pour « table row » ou « ligne de tableau » en français qui vont nous permettre d&rsquo;ajouter des lignes dans notre tableau ;</li>
+		 	<li>Des éléments <code>td</code>, pour « table data » ou « donnée de tableau » en français qui vont nous permettre d’ajouter des cellules dans nos lignes et ainsi de créer automatiquement de nouvelles colonnes.</li>
+		 	</ul>
+		 	<p>L&rsquo;élément HTML <code>table</code> va représenter le tableau en soi. Cet élément est composé d&rsquo;une paire de balises ouvrante <code>&lt;table&gt;</code> et fermante <code>&lt;/table&gt;</code> au sein desquelles nous allons placer les différents autres éléments de notre tableau. Les éléments <code>tr</code> et <code>td</code> sont également représentés sous la forme d’une paire de balises avec leur contenu entre les balises.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Créer un tableau simple en HTML</h2>
+		 	<p>Pour créer un tableau en HTML, il y a une chose que vous devez bien comprendre qui est que les tableaux HTML vont être créés ligne par ligne.</p>
+		 	<p>A chaque fois que nous voudrons ajouter une ligne dans notre tableau, nous utiliserons un nouvel élément <code>tr</code>.</p>
+		 	<p>Nous allons ensuite pouvoir ajouter autant d’éléments <code>td</code> au sein de chacune de nos lignes. Chaque élément <code>td</code> va représenter une cellule dans le tableau.</p>
+		 	<p>Par exemple, pour créer un tableau en HTML contenant 3 lignes contenant chacune 4 cellules (c’est-à-dire un tableau de 3 lignes, 4 colonnes), nous utiliserons notre élément <code>table</code> qui va contenir 3 éléments <code>tr</code> et chaque élément <code>tr</code> contiendra 4 éléments <code>td</code> comme ceci (ne tenez pas compte de la mise en forme pour le moment, nous en reparlerons plus tard) :</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20620'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-simple.png" alt="Création d&#039;un tableau simple en HTML avec table" width="700" height="620" class="alignnone size-full wp-image-7435 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-simple.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-simple-300x266.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-simple-400x354.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20220'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-simple.png" alt="Résultat visuel tableau HTML" width="700" height="220" class="alignnone size-full wp-image-7436 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-simple.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-simple-300x94.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-simple-400x126.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="449" data-theme-id="0" data-slug-hash="jQjJjM" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 7.1.1" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/jQjJjM/">Cours HTML CSS 7.1.1</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Nous venons ci-dessus de créer notre premier tableau entièrement en HTML. Retenez bien la syntaxe et particulièrement l’ordre d’imbrication des éléments avec nos éléments <code>td</code> à l’intérieur de nos éléments <code>tr</code> : on va utiliser un nouvel élément <code>td</code> dès que l’on va vouloir ajouter une cellule (et donc une colonne) au sein d’une même ligne.</p>
+		 	<p>Si vous essayez de ne recopier que le code HTML présenté ci-dessus et de l’afficher, vous risquez d’avoir un objet qui ne ressemble pas à l’idée que l’on se fait d’un tableau. C’est tout à fait normal puisque j’ai déjà ici mis sommairement notre premier tableau HTML en forme en utilisant des propriétés CSS.</p>
+		 	<p>Retenez cependant qu’au sens du HTML, et même sans mise en forme CSS, l’objet créé est bien un tableau. J’attire votre attention ici sur le fait que le rôle du HTML n’est que de structurer du contenu, c’est-à-dire le rendre intelligible pour les navigateurs et moteurs de recherche.</p>
+		 	<p>Notez par ailleurs que différentes lignes peuvent contenir un nombre différent de cellules même si cela est considéré comme une mauvaise pratique pour des raisons évidentes de sémantique et de lisibilité. Dans le cas où cela arriverait, la largeur de notre tableau HTML (i.e son nombre de colonnes) serait égale au nombre de cellules de la ligne contenant le plus de cellules.</p>
+		 	<p>Regardez plutôt l’exemple suivant où on a créé un tableau HTML de 3 lignes avec une première ligne contenant 4 cellules, une deuxième ligne contenant seulement 2 cellules, et la dernière ligne contenant 3 cellules :</p>
+		 	<p data-height="399" data-theme-id="0" data-slug-hash="ZmdZJx" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 7.1.2" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/ZmdZJx/">Cours HTML CSS 7.1.2</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Encore une fois, retenez qu&rsquo;il est considéré comme une mauvaise mauvaise pratique de créer des lignes de tableau avec un nombre de cellules différent dans chacune. En pratique, nous attribuerons toujours un même nombre de <code>td</code> à nos différentes lignes. Si on souhaite laisser une cellule vide, nous nous contenterons d’écrire <code>&lt;td&gt; &lt;/td&gt;</code> sans rien écrire entre les balises.</p>
+		 	<p>Imaginons par exemple que nous voulions laisser la cellule « age » vide pour la ligne relative à « Pierre » Pour cela, il suffit de créer un élément <code>td</code> pour son âge et de ne mettre aucun contenu dedans.</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20600'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-cellule-vide.png" alt="Créer un tableau HTML avec des cellules vides" width="700" height="600" class="alignnone size-full wp-image-7437 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-cellule-vide.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-cellule-vide-300x257.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-tableau-cellule-vide-400x343.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20225'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-cellule-vide.png" alt="Une cellule vide est un élément HTML td sans contenu" width="700" height="225" class="alignnone size-full wp-image-7438 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-cellule-vide.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-cellule-vide-300x96.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-tableau-cellule-vide-400x129.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="434" data-theme-id="0" data-slug-hash="bQPJYg" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 7.1.3" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/bQPJYg/">Cours HTML CSS 7.1.3</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	
+		 	</div>
+
+		 	
+		 </div>
+		 <!-- Fin section tableaux -->
+
+		 <!-- Debut section formulaire -->
+
+		 <div id="Formulaires">
+		 	<h2 id="ancre">Les Formulaires</h2>
+		 	<div class="contenu">
+		 	Nous allons aborder dans cette nouvelle partie une partie essentielle du HTML qui va consister en la création de formulaires. </p>
+		 	<p>Nous allons donc définir ensemble ce qu’est un formulaire HTML et à quoi vont servir les formulaires puis nous allons apprendre à créer des formulaires plus ou moins complexes. </p>
+		 	<p>&nbsp;</p>
+		 	<h2>Définition et rôle des formulaires HTML</h2>
+		 	<p>Les formulaires HTML vont permettre à nos visiteurs de nous envoyer des données que nous allons ensuite pouvoir manipuler et / ou stocker. </p>
+		 	<p>Nous allons utiliser les formulaires pour permettre à des utilisateurs de s’inscrire sur notre site (formulaires d’inscription), de se connecter (formulaire de connexion), de nous envoyer des messages (formulaire de contact), de laisser des commentaires, etc.</p>
+		 	<p>Vous l’aurez donc compris : les formulaires se révèlent indispensables et incontournables dans de nombreuses situations. </p>
+		 	<p>Les formulaires HTML vont pouvoir être composés de champs de texte (cas d’un champ de formulaire demandant à un utilisateur de renseigner son adresse mail pour se connecter ou pour s’inscrire sur le site par exemple), de listes d’options (choix d’un pays dans une liste de pays par exemple), de cases à cocher, etc.</p>
+		 	<p>Cependant, vous devez bien comprendre ici qu’on touche avec les formulaires aux limites du langage HTML. En effet, nous allons tout à fait pouvoir construire nos formulaires en HTML, mais le HTML ne va nous permettre ni de recueillir les données envoyées par nos visiteurs, ni de les manipuler, ni de les stocker. </p>
+		 	<p>Pour réaliser ces différentes opérations, il faudra utiliser d’autres types de langages comme le PHP (pour la manipulation des données) et le MySQL (pour le stockage) par exemple qui vont s’exécuter côté serveur.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>L’élément form et ses attributs</h2>
+		 	<p>Pour créer un formulaire, nous allons utiliser l&rsquo;élément HTML <code>form</code>. Cet élément <code>form</code> va avoir besoin de deux attributs pour fonctionner normalement : les attributs <code>method</code> et <code>action</code>.</p>
+		 	<p>L’attribut <code>method</code> va indiquer comment doivent être envoyées les données saisies par l’utilisateur. Cet attribut peut prendre deux valeurs : <code>get</code> et <code>post</code>.</p>
+		 	<p>Que signifient ces deux valeurs et laquelle choisir ? Les valeurs <code>get</code> et <code>post</code> vont déterminer la méthode de transit des données du formulaire. En choisissant <code>get</code>, on indique que les données doivent transiter via l&rsquo;URL (sous forme de paramètres) tandis qu&rsquo;en choisissant la valeur <code>post</code> on indique qu&rsquo;on veut envoyer les données du formulaire via transaction post HTTP.</p>
+		 	<p>Concrètement, si l’on choisit l’envoi via l’URL (avec la valeur <code>get</code>), nous serons limités dans la quantité de données pouvant être envoyées et surtout les données vont être envoyées en clair. Evitez donc absolument d’utiliser cette méthode si vous demandez des mots de passe ou toute information sensible dans votre formulaire. </p>
+		 	<p>Cette méthode de transit est généralement utilisée lors de l&rsquo;affichage de produits triés sur un site e-commerce (car oui, les options de tris sont des éléments de formulaires avant tout !). Regardez bien les URL la prochaine fois que vous allez sur un site e-commerce après avoir fait un tri : si vous retrouvez des éléments de votre tri dedans c&rsquo;est qu&rsquo;un <code>get</code> a été utilisé.</p>
+		 	<p>En choisissant l’envoi de données via post transaction HTTP (avec la valeur <code>post</code>), nous ne sommes plus limités dans la quantité de données pouvant être envoyées et les données ne sont visibles par personne. C’est donc généralement la méthode que nous utiliserons pour l&rsquo;envoi véritablement de données que l&rsquo;on souhaite stocker (création d&rsquo;un compte client, etc.).</p>
+		 	<p>L’attribut <code>action</code> va lui nous servir à préciser l’adresse de la page qui va traiter les données. Je vous rappelle ici qu’on ne va pas pouvoir manipuler les données des formulaires en HTML mais que nous allons être obligé d’utiliser un autre langage comme le PHP pour cela. </p>
+		 	<p>Généralement, nous enverrons les données reçues vers un fichier PHP dont le but sera de traiter ces données justement. Nous n’allons bien évidemment pas créer ce fichier dans ce cours, mais je vous propose pour les exemples suivants de faire « comme si » ce fichier existait. Nous pourrons l&rsquo;appeler <code>form.php</code>.</p>
+		 	<p>&nbsp;</p>
+		 	<h2>Création d&rsquo;un premier formulaire simple en HTML</h2>
+		 	<p>Il est temps de passer à la pratique et de créer un premier formulaire simple en HTML. Dans ce formulaire, nous allons demander trois choses à l&rsquo;utilisateur : </p>
+		 	<ul>
+		 	<li>Un pseudonyme à l’utilisateur ;</li>
+		 	<li>Un mot de passe ;</li>
+		 	<li>Une adresse mail.</li>
+		 	</ul>
+		 	<h3>Création des champs de formulaire avec l’élément input</h3>
+		 	<p>Pour faire cela, nous allons avoir besoin de créer trois champs de formulaires dans lesquels l&rsquo;utilisateur pourra remplir les informations demandées. Pour créer ces champs, nous allons utiliser des éléments HTML <code>input</code>. </p>
+		 	<p>L&rsquo;élément HTML <code>input</code> est un élément qui va permettre à l’utilisateur d’envoyer des données. Il se présente sous la forme d’une balise orpheline et va obligatoirement posséder un attribut <code>type</code> auquel on va pouvoir donner de nombreuses valeurs.</p>
+		 	<p>La valeur passée à l&rsquo;attribut <code>type</code> va déterminer le type de données que l&rsquo;utilisateur va pouvoir envoyer : un texte avec <code>input type="text"</code>, une adresse mail avec <code>input type="email"</code>, une date avec <code>input type="date"</code>, etc.</p>
+		 	<p>Si le format de données entrées par l&rsquo;utilisateur ne correspond pas à ce qui est attendu, alors il ne pourra pas envoyer le formulaire et un message d&rsquo;erreur s&rsquo;affichera selon le navigateur utilisé. </p>
+		 	<p>Notez également que les navigateurs proposent aujourd&rsquo;hui des présentations différentes en fonction du type d&rsquo;<code>input</code> et notamment sur mobile : pour un <code>input type="date"</code>, par exemple, un calendrier sera souvent affiché pour aider l&rsquo;utilisateur à choisir une date.</p>
+		 	<p>La base de notre formulaire va donc ressembler à cela : </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20320'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-squelette-formulaire.png" alt="Création d&#039;un formulaire HTML simple avec form et input" width="700" height="320" class="alignnone size-full wp-image-7708 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-squelette-formulaire.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-squelette-formulaire-300x137.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-squelette-formulaire-400x183.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20130'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-squelette-formulaire.png" alt="Illustration résultat exemple de création d&#039;un formulaire HTML" width="700" height="130" class="alignnone size-full wp-image-7707 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-squelette-formulaire.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-squelette-formulaire-300x56.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-squelette-formulaire-400x74.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="227" data-theme-id="0" data-slug-hash="jXBpwp" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 11.1.1" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/jXBpwp/">Cours HTML CSS 11.1.1</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Comme vous pouvez le voir, nos trois champs de formulaires sont bien créés. Si vous placez le curseur de votre souris dans un champ et que vous commencez à écrire, vous devriez voir que le navigateur comprend bien le type de données attendu dans chaque champ : par exemple, le texte inscrit dans le champ demandant un mot de passe par exemple devrait s&rsquo;afficher sous forme d&rsquo;étoiles.</p>
+		 	<p>De plus, il est également possible que votre navigateur vous propose une auto-complétion des champs si vous avez déjà rempli des formulaires demandant des types de données similaires sur un autre site précédemment. </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20130'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-navigateur-type-donnees.png" alt="Auto complete input formulaire form HTML navigateur" width="700" height="130" class="alignnone size-full wp-image-7709 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-navigateur-type-donnees.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-navigateur-type-donnees-300x56.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-navigateur-type-donnees-400x74.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p>En l&rsquo;état, notre formulaire n&rsquo;est cependant pas exploitable pour la simple et bonne raison que l&rsquo;utilisateur ne possède pas d&rsquo;indication sur ce qu&rsquo;il doit rentrer dans chaque champ et également car pour le moment notre formulaire ne possède pas de bouton d&rsquo;envoi des données !</p>
+		 	<h3>Ajout d’indications sur les données attendues avec l’élément label</h3>
+		 	<p>Pour donner des indications sur les données attendues dans chaque champ aux utilisateurs, nous allons utiliser des éléments <code>label</code>. Cet élément va permettre d&rsquo;attribuer un libellé (c&rsquo;est-à-dire une étiquette ou une description) à chaque champ de notre formulaire. </p>
+		 	<p>Pour des raisons d’ergonomie et de cohérence, il est considéré comme une bonne pratique de lier chaque <code>label</code> à son <code>input</code> correspondant. Ainsi, lorsque l’utilisateur va cliquer sur le <code>label</code>, le curseur de la souris va automatiquement être placé dans l&rsquo;<code>input</code> correspondant. </p>
+		 	<p>Pour lier un <code>label</code> et un <code>input</code> ensemble, nous allons attribuer un attribut <code>id</code> unique à chacun de nos éléments <code>input</code> pour les identifier de manière formelle et allons également rajouter un attribut <code>for</code> à chacun de nos <code>label</code> qui devra avoir la même valeur que l&rsquo;<code>id</code> de l&rsquo;<code>input</code> auquel il doit être lié.</p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20500'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-label.png" alt="Utilisation d&#039;un élément label avec un input dans un formulaire HTML" width="700" height="500" class="alignnone size-full wp-image-7711 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-label.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-label-300x214.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-label-400x286.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20180'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-label.png" alt="On lie nos éléments label et input entre eux dans notre formulaire HTML" width="700" height="180" class="alignnone size-full wp-image-7710 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-label.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-label-300x77.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-label-400x103.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="406" data-theme-id="0" data-slug-hash="GPWBOE" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 11.1.2" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/GPWBOE/">Cours HTML CSS 11.1.2</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Ici, j’en ai profité pour placer mes couples <code>label</code> + <code>input</code> dans des <code>div</code> afin que chacun d’entre eux soit sur une ligne à eux et j’ai également passé une <code>margin-bottom : 10px</code> aux <code>div</code>.</p>
+		 	<p>Nous en avons fini avec les champs de notre premier formulaire HTML en soi et il ne nous reste donc plus qu&rsquo;à nous préoccuper de l&rsquo;envoi des données.</p>
+		 	<h3>Ajout du bouton d’envoi de données</h3>
+		 	<p>Pour permettre l&rsquo;envoi de ces données vers notre page <code>form.php</code>, il va nous falloir créer un bouton de soumission de formulaire. Pour cela, nous allons à nouveau tout simplement utiliser un élément <code>input</code> mais cette fois-ci de type <code>input type="submit"</code>. </p>
+		 	<p>Cet <code>input</code> un peu spécial va se présenter sous forme de « bouton » et nous n&rsquo;allons pas avoir besoin de lui ajouter de <code>label</code>. A la place, nous allons utiliser un attribut <code>value</code> et lui passer en valeur le texte que doit contenir notre bouton (« soumettre », « valider », ou « envoyer » par exemple). </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20560'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-type-submit.png" alt="Bouton d&#039;envoi du formulaire HTML input type submit et attribut value" width="700" height="560" class="alignnone size-full wp-image-7713 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-type-submit.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-type-submit-300x240.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-input-type-submit-400x320.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20200'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-type-submit.png" alt="On ajoute un bouton d&#039;envoi de formulaire à notre form HTML avec une valeur" width="700" height="200" class="alignnone size-full wp-image-7712 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-type-submit.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-type-submit-300x86.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/resultat-input-type-submit-400x114.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="463" data-theme-id="0" data-slug-hash="REpBQV" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 11.1.3" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/REpBQV/">Cours HTML CSS 11.1.3</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<h3>Identification des données du formulaire</h3>
+		 	<p>En l’état, notre formulaire n’est pas encore tout à fait utilisable. En effet, celui-ci fonctionne côté « façade » et va bien permettre à un utilisateur de remplir des données et de les envoyer. </p>
+		 	<p>Cependant, pour le moment, nous ne pourrions pas manipuler les données envoyées car elles n&rsquo;ont pas été nommées : les données vont bien être envoyées mais il va être impossible pour nous de définir à quel champ correspond chaque donnée envoyée. </p>
+		 	<p>Pour identifier les données et pouvoir ensuite les manipuler en PHP ou autre, nous allons devoir ajouter un attribut <code>name</code> qui doit également posséder une valeur unique à chaque élément de formulaire demandant des données à l&rsquo;utilisateur. </p>
+		 	<p>Notez bien ici que chaque attribut <code>name</code> doit posséder une valeur unique par rapport aux autres attributs <code>name</code> mais rien ne nous empêche de choisir la même valeur pour un attribut <code>name</code> et un attribut <code>id</code> par exemple puisqu&rsquo;il n&rsquo;y a pas de risque de confusion étant donné que ce sont deux attributs totalement différents. </p>
+		 	<p><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20560'%3E%3C/svg%3E" data-src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-attribut-name-formulaire.png" alt="Ajout d&#039;un attribut name aux input de notre formulaire HTML pour récupérer les données" width="700" height="560" class="alignnone size-full wp-image-7714 lazy" data-srcset="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-attribut-name-formulaire.png 700w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-attribut-name-formulaire-300x240.png 300w, https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-attribut-name-formulaire-400x320.png 400w" data-sizes="(max-width: 700px) 100vw, 700px" /></p>
+		 	<p data-height="502" data-theme-id="0" data-slug-hash="Orpwvz" data-default-tab="html,result" data-user="pierregiraud" data-pen-title="Cours HTML CSS 11.1.4" class="codepen">See the Pen <a href="https://codepen.io/pierregiraud/pen/Orpwvz/">Cours HTML CSS 11.1.4</a> by Pierre  (<a href="https://codepen.io/pierregiraud">@pierregiraud</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		 	<p><script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+		 	<p>Ça y est, notre premier formulaire HTML est maintenant tout à fait fonctionnel. Expliquons rapidement la logique derrière ce formulaire, c&rsquo;est-à-dire le fonctionnement de notre formulaire HTML. </p>
+		 	<p>Lorsqu&rsquo;un utilisateur arrive sur notre page, il va remplir les différents champs de formulaire créés avec des éléments <code>input</code>. </p>
+		 	<p>Ensuite, il va cliquer sur le bouton d&rsquo;envoi du formulaire. Les données du formulaire vont alors être envoyées via transaction HTTP de type <code>post</code> vers la page <code>form.php</code>. </p>
+		 	<p>Dans cette page <code>form.php</code>, nous allons ensuite pouvoir manipuler les différentes données du formulaire qu&rsquo;on va pouvoir identifier grâce aux attributs <code>name</code> donnés à chaque <code>input</code>. </p>
+		 	<p>Encore une fois, l&rsquo;objet de ce tutoriel n&rsquo;est pas de présenter la manipulation des données en PHP ni le stockage mais bien de nous concentrer sur la création des formulaires en soi c&rsquo;est-à-dire sur la partie HTML des formulaires.</p>
+		 	
+
+		 	</div>
+		 	
+		 </div>
+		 <!-- Fin section formulaire -->
+
+
+		 <!-- Debut section HTML Avancé -->
+		 <div id="HTML Avancé">
+		 	<h3 id="ancre">HTML Avancé</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section HTML Avancé -->
+
+
+		 <!-- Debut section Medias Query -->
+
+		 <div id="Medias Query">
+		 	<h3 id="ancre">Les Medias Query</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section Medias Query -->
+
+
+		 <!-- Debut section API HTML -->
+
+		 <div id="API HTML">
+		 	<h3 id="ancre">Les API HTML</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section API HTML -->
+
+
+		 <!-- Debut section Convertisseur -->
+
+		 <div id="Convertisseur Px en Em">
+		 	<h3 id="ancre">Convertisseur Px en Em</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section Convertisseur -->
+
+
+		 <!-- Debut section Balise Canva -->
+
+		 <div id="Balise Canvas">
+		 	<h3 id="ancre">La Balise Canvas</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section Balise Canva -->
+
+
+		 <!-- Debut section Referances -->
+
+		 <div id="Referances">
+		 	<h3 id="ancre">Les Referances</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section Referances -->
+
+
+		 <!-- Debut section Defis du code -->
+
+		 <div id="Defis du code">
+		 	<h3 id="ancre">Les Defis du code</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+
+		 <!-- Fin section Defis du code -->
+
+
+		 <!-- Debut section Projets HTML5 -->
+
+		 <div id="Projets HTML5">
+		 	<h3 id="ancre">Les Projets HTML5</h3>
+		 	<p>
+		 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 	</p>
+		 	
+		 </div>
+		 <!-- Fin section Projets HTML5 -->
+
+		<!-- Fin contenu de la doc -->
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+/*Initialisation de la page*/
+* {
+	text-decoration: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: "Opens Sans" , sans-serif , ariel , verdana, tahoma;
+}
+
+
+/*Design du Menu profil*/
+#menu-profil {
+	background-color: rgb(5, 68, 104);
+	width: 250px;
+	height: 100%;
+	padding: 20px 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+#menu-profil #profil {
+	margin-bottom: 30px;
+	text-align: center;
+	color: #FFF;
+}
+#profil img {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 10px solid rgb(32, 44, 69);
+}
+#profil p {
+	font-size: 1.2em;
+	margin-top: 2;
+}
+#profil h2 {
+	font-size: 1.5em;
+}
+/*Design liste*/
+#menu-profil ul li a {
+	display: block;
+	padding: 10px 30px;
+	color: #FFF;
+	border-bottom: 1px solid #10558D;
+	font-size: 16px;
+	position: relative;
+}
+#menu-profil ul li a:hover, .active {
+	background-color: #FFF;
+	color: darkblue !important;
+	border-right: 2px solid rgb(5, 68, 105);
+}
+/*Design du contenu du blog*/
+#section {
+	width: calc(100% - 250px);
+	margin-left: 250px;
+}
+.topBar {
+	background-color: rgb(32, 44, 69);
+	height: 55px;
+	width: 100%;
+	padding: 0 30px;
+	align-items: center;
+	display: flex;
+}
+.topBar a h2 {
+	color: #F4FAFB;
+	font-size: 2.3em;
+}
+#section .topBar a h2:hover {
+	color: rgba(92, 92, 252, 0.8);
+}
+/*Design du blog de la banniere*/
+#banner {
+	background-color: rgb(7, 105, 185);
+	height: 220px;
+	padding: 0 30px;
+}
+#banner .titre h2 {
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 50px;
+	color: #FFF;
+}
+.trait {
+	border: 5px solid lightyellow;
+	width: 50%;
+	margin: 10px auto;
+}
+#banner button {
+	height: 6vh;
+	color: rgb(5, 68, 104);
+	font-size: 1.3em;
+	width: 20%;
+	align-items: center;
+	margin: 10px auto;
+	display: block;
+}
+/*Design sur les articles*/
+.article {
+	height: 250px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	padding: 0 30px;
+}
+.article img {
+	width: 200px;
+}
+.article .contenu {
+	margin-left: 10px;
+	font-size: 15px;
+}
+/*Design de l'article2*/
+.article2 {
+	height: 250px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	padding: 0 30px;
+}
+.article2 img {
+	width: 200px;
+}
+.article2 .contenu {
+	margin-left: 10px;
+	font-size: 15px;
+}
+/*Design de banniere2 du blog*/
+#banner2 {
+	height: 230px;
+	background-color: rgb(7, 105, 185);
+	align-items: center;
+	color: #FFF;
+	padding: 0 30px;
+}
+#banner2 form {
+	display: flex;
+	margin-left: 200px;
+}
+#banner2 .Email {
+	width: 170px;
+}
+#banner2 input {
+	align-items: center;
+	display: block;
+	margin: 10px 0;
+	height: 4vh;
+	width: 10%;
+	font-size: 13px;
+	margin-left: 20px;
+}
+/*Design de l'article3*/
+.article3 {
+	height: 250px;
+	margin-top: 10px;
+	align-items: center;
+	display: flex;
+	padding: 0 30px;
+}
+.article3 img {
+	width: 200px;
+}
+.article3 .contenu {
+	font-size: 15px;
+	margin-left: 10px;
+}
+/*Design de l'article 4*/
+.article4 {
+	height: 250px;
+	margin-top: 10px;
+	align-items: center;
+	display: flex;
+	padding: 0 30px;
+}
+.article4 img {
+	width: 200px;
+}
+.article4 .contenu {
+	font-size: 15px;
+	margin-left: 10px;
+}
+.badge a h4 {
+	padding-left: 10px;
+	background-color: rgb(5, 68, 104);
+	color: #FFF;
+	padding: 20px;
+	text-align: center;
+
+}

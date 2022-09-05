@@ -1,0 +1,10 @@
+body {
+	background-color: rgb(5, 0, 86);
+}
+/*Design de la section*/
+#formulaire {
+	width: 400px;
+	margin: auto;
+	margin-top: 150px;
+	background-color: white;
+}
